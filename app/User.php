@@ -2,12 +2,16 @@
 
 namespace App;
 
+use App\Tickets\Sell;
+use App\Traits\WithProfiles;
 use Illuminate\Notifications\Notifiable;
+use App\Billing\Billable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Facades\Cache;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Billable, WithProfiles;
 
     /**
      * The attributes that are mass assignable.
@@ -15,7 +19,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password'
     ];
 
     /**
@@ -26,4 +30,52 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $dates = [
+        'deleted_at',
+        'created_at',
+        'updated_at'
+    ];
+
+    public function customer(){
+        return $this->hasOne('App\Customer');
+    }
+
+    public function buyer() {
+        return $this->hasOne('App\Buyer');
+    }
+
+    public function seller() {
+        return $this->hasOne('App\Seller');
+    }
+
+    public function roles() {
+        return $this->belongsToMany('App\Role');
+    }
+
+    public function location() {
+        return $this->morphMany('App\Location', 'locationable');
+    }
+
+    public function social() {
+        return $this->morphMany('App\Social', 'sociable');
+    }
+
+    public function tags() {
+        return $this->morphToMany('App\Tag', 'taggable');
+    }
+
+    public function profile() {
+        return $this->morphMany('App\Profile', 'profileable');
+    }
+
+    public function phone() {
+        return $this->morphMany('App\Phone', 'phonable');
+    }
+
+
+    public function sell() {
+        return new Sell($this);
+    }
+
 }
