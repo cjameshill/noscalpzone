@@ -1,6 +1,8 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Shrikhand');
 
+@import "../../../bower_components/mappy-breakpoints/mappy-breakpoints";
+
 @import "bulma/sass/utilities/functions.sass";
 @import "_variables";
 @import "bulma/sass/utilities/mixins.sass";
@@ -19,4 +21,10 @@
 
 @import "_base";
 
+@import "layouts/_layouts";
+
 @import "elements/_elements";
+
+@import "components/_components";
+
+@import "_animations";

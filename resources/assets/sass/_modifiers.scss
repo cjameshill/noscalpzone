@@ -1,0 +1,93 @@
+//// MODIFIERS
+
+.title, .subtitle {
+  font-family: $family-serif;
+}
+
+.center-column, .center {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.center-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.columns {
+  padding-top: 1em;
+}
+
+header, footer {
+  padding: 1.5em;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.has-no-margin {
+  margin: 0;
+}
+
+.is-min-height {
+  min-height: 100vh;
+}
+
+/// is-background COLOR
+
+.hero, nav.nav, .box, section.footer {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+    &.is-#{$name}{
+      .title, .subtitle, a, strong, p, span {
+        color: $color-invert;
+      }
+      .nav-item {
+        .title, .subtitle, a, strong, p, span {
+          color: $color-invert;
+        }
+      }
+      .hero-body .box {
+        .title, .subtitle, a, strong, p {
+          color: $color;
+        }
+      }
+    }
+  }
+}
+
+.hero-body {
+  width: 100%;
+  padding: 150px 1em;
+}
+
+.is-background {
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+
+  .hero-body, .body {
+    height: 100%;
+    background: $transparent-cover;
+  }
+
+}
+
+.has-transition {
+  transition: all 0.2s ease-in;
+}

@@ -1,0 +1,57 @@
+///// COMPONENTS
+
+///// HEADER
+
+section.header {
+  z-index: index($elements, header);
+}
+
+nav.nav {
+  background: none;
+  padding: 1.5em;
+
+  &.reduce {
+    background: $transparent-black;
+    padding: 0;
+
+    input.search-main-menu, a.button.is-medium {
+      font-size: 16px;
+    }
+  }
+}
+
+.nav-main-menu {
+  display: none;
+
+  @include mappy-bp(med){
+    display: block;
+  }
+}
+
+
+//// NOTIFICATIONS
+
+.notifications-hold {
+  background: none;
+  margin: 0;
+  padding: 0 10vw;
+  z-index: 999;
+}
+
+.notification {
+  .title {
+    margin-bottom: 0;
+  }
+  button {
+    margin: 0 1em;
+  }
+}
+
+/// FOOTER
+
+section.footer {
+  background: $footer-background;
+  padding-top: 250px;
+  padding-bottom: 250px;
+
+}

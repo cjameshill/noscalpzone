@@ -30,12 +30,12 @@ $family-sans-serif: "Open-Sans", "Helvetica Neue", "Helvetica", "Arial", sans-se
 $family-serif: "Shrikhand", 'Georgia', serif;
 $family-monospace: "Inconsolata", "Consolas", "Monaco", monospace !default
 
-$size-1: 48px !default
-$size-2: 40px !default
-$size-3: 28px !default
-$size-4: 24px !default
-$size-5: 18px !default
-$size-6: 14px !default
+$size-1: 6em !default
+$size-2: 4.2em !default
+$size-3: 3em !default
+$size-4: 2.5em !default
+$size-5: 1.8em !default
+$size-6: 1em !default
 
 $size-7: 11px !default
 
@@ -65,7 +65,8 @@ $danger: $red !default
 $light: $white-ter !default
 $dark: $grey-darker !default
 
-$transparent-black: hsla(0, 0%, 4%, 0.7);
+$transparent-black: hsla(0, 0%, 4%, 0.85);
+$transparent-cover: hsla(0, 0%, 4%, 0.35);
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -90,6 +91,8 @@ $background: $white-ter !default
 $border: $grey-lighter !default
 $border-hover: $grey-light !default
 
+$footer-background: $black-bis;
+
 // Text colors
 $text: $grey-dark !default
 $text-invert: findColorInvert($text) !default
@@ -110,9 +113,9 @@ $link-visited: $purple !default
 
 $link-hover: $grey-darker !default
 $link-hover-background: $white-ter !default
-$link-hover-border: $grey-darker !default
+$link-hover-border: $grey !default
 
-$link-hover-darken: 15%;
+$link-hover-darken: 20%;
 
 $link-active: $grey-darker !default
 $link-active-border: $grey-darker !default
@@ -134,3 +137,17 @@ $size-huge: $size-1 !default
 $colors: (background: ($black, $white), white: ($white, $black), black: ($black, $white), light: ($light, $light-invert), dark: ($dark, $dark-invert), primary: ($primary, $primary-invert), info: ($info, $info-invert), success: ($success, $success-invert), warning: ($warning, $warning-invert), danger: ($danger, $danger-invert)) !default
 
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default
+
+// Z-Index
+
+$elements: wrapper, header;
+
+// Breakpoints
+
+$breakpoints: (
+        'small'     : 320px,
+        'med'       : 640px,
+        'large'     : 920px,
+        'wide'      : 1200px,
+        'mega'      : 1400px,
+);

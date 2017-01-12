@@ -7,3 +7,5 @@ require('./_dropzone');
 require('./_search');
 
 require('./vue');
+
+require('./_scroll');

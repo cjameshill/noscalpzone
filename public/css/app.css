@@ -107,7 +107,7 @@ th {
 
 html {
   background-color: whitesmoke;
-  font-size: 14px;
+  font-size: 1em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -610,7 +610,7 @@ a.box:active {
   color: #363636;
   display: -webkit-inline-box;
   display: inline-flex;
-  font-size: 14px;
+  font-size: 1em;
   height: 32px;
   -webkit-box-pack: start;
   justify-content: flex-start;
@@ -714,7 +714,7 @@ a.box:active {
 }
 
 .button.is-background.is-inverted:hover {
-  background-color: #d9d9d9;
+  background-color: #cccccc;
 }
 
 .button.is-background.is-loading:after {
@@ -741,7 +741,7 @@ a.box:active {
 }
 
 .button.is-white:hover, .button.is-white:focus, .button.is-white.is-active {
-  background-color: #d9d9d9;
+  background-color: #cccccc;
   border-color: transparent;
   color: #0a0a0a;
 }
@@ -790,7 +790,7 @@ a.box:active {
 }
 
 .button.is-black.is-inverted:hover {
-  background-color: #d9d9d9;
+  background-color: #cccccc;
 }
 
 .button.is-black.is-loading:after {
@@ -817,7 +817,7 @@ a.box:active {
 }
 
 .button.is-light:hover, .button.is-light:focus, .button.is-light.is-active {
-  background-color: #cfcfcf;
+  background-color: #c2c2c2;
   border-color: transparent;
   color: #363636;
 }
@@ -828,7 +828,7 @@ a.box:active {
 }
 
 .button.is-light.is-inverted:hover {
-  background-color: #0f0f0f;
+  background-color: #030303;
 }
 
 .button.is-light.is-loading:after {
@@ -855,7 +855,7 @@ a.box:active {
 }
 
 .button.is-dark:hover, .button.is-dark:focus, .button.is-dark.is-active {
-  background-color: #0f0f0f;
+  background-color: #030303;
   border-color: transparent;
   color: whitesmoke;
 }
@@ -866,7 +866,7 @@ a.box:active {
 }
 
 .button.is-dark.is-inverted:hover {
-  background-color: #cfcfcf;
+  background-color: #c2c2c2;
 }
 
 .button.is-dark.is-loading:after {
@@ -893,7 +893,7 @@ a.box:active {
 }
 
 .button.is-primary:hover, .button.is-primary:focus, .button.is-primary.is-active {
-  background-color: #c22d00;
+  background-color: #a82700;
   border-color: transparent;
   color: white;
 }
@@ -904,7 +904,7 @@ a.box:active {
 }
 
 .button.is-primary.is-inverted:hover {
-  background-color: #d9d9d9;
+  background-color: #cccccc;
 }
 
 .button.is-primary.is-loading:after {
@@ -931,7 +931,7 @@ a.box:active {
 }
 
 .button.is-info:hover, .button.is-info:focus, .button.is-info.is-active {
-  background-color: #1c51a6;
+  background-color: #184690;
   border-color: transparent;
   color: white;
 }
@@ -942,7 +942,7 @@ a.box:active {
 }
 
 .button.is-info.is-inverted:hover {
-  background-color: #d9d9d9;
+  background-color: #cccccc;
 }
 
 .button.is-info.is-loading:after {
@@ -969,7 +969,7 @@ a.box:active {
 }
 
 .button.is-success:hover, .button.is-success:focus, .button.is-success.is-active {
-  background-color: #189042;
+  background-color: #157a38;
   border-color: transparent;
   color: white;
 }
@@ -980,7 +980,7 @@ a.box:active {
 }
 
 .button.is-success.is-inverted:hover {
-  background-color: #d9d9d9;
+  background-color: #cccccc;
 }
 
 .button.is-success.is-loading:after {
@@ -1007,7 +1007,7 @@ a.box:active {
 }
 
 .button.is-warning:hover, .button.is-warning:focus, .button.is-warning.is-active {
-  background-color: #ffce0a;
+  background-color: #f0c000;
   border-color: transparent;
   color: rgba(0, 0, 0, 0.7);
 }
@@ -1045,7 +1045,7 @@ a.box:active {
 }
 
 .button.is-danger:hover, .button.is-danger:focus, .button.is-danger.is-active {
-  background-color: #eb002f;
+  background-color: #d1002a;
   border-color: transparent;
   color: white;
 }
@@ -1056,7 +1056,7 @@ a.box:active {
 }
 
 .button.is-danger.is-inverted:hover {
-  background-color: #d9d9d9;
+  background-color: #cccccc;
 }
 
 .button.is-danger.is-loading:after {
@@ -1249,19 +1249,19 @@ a.box:active {
 }
 
 .content.is-medium {
-  font-size: 18px;
+  font-size: 1.8em;
 }
 
 .content.is-medium code {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .content.is-large {
-  font-size: 24px;
+  font-size: 2.5em;
 }
 
 .content.is-large code {
-  font-size: 18px;
+  font-size: 1.8em;
 }
 
 .input,
@@ -1276,7 +1276,7 @@ a.box:active {
   color: #363636;
   display: -webkit-inline-box;
   display: inline-flex;
-  font-size: 14px;
+  font-size: 1em;
   height: 32px;
   -webkit-box-pack: start;
   justify-content: flex-start;
@@ -1494,7 +1494,7 @@ a.box:active {
   color: #363636;
   display: -webkit-inline-box;
   display: inline-flex;
-  font-size: 14px;
+  font-size: 1em;
   height: 32px;
   -webkit-box-pack: start;
   justify-content: flex-start;
@@ -2429,13 +2429,13 @@ a.box:active {
 
 .title {
   color: #363636;
-  font-size: 28px;
+  font-size: 3em;
   line-height: 1;
 }
 
 .title code {
   display: inline-block;
-  font-size: 28px;
+  font-size: 3em;
 }
 
 .title strong {
@@ -2451,51 +2451,51 @@ a.box:active {
 }
 
 .title.is-1 {
-  font-size: 48px;
+  font-size: 6em;
 }
 
 .title.is-1 code {
-  font-size: 40px;
+  font-size: 4.2em;
 }
 
 .title.is-2 {
-  font-size: 40px;
+  font-size: 4.2em;
 }
 
 .title.is-2 code {
-  font-size: 28px;
+  font-size: 3em;
 }
 
 .title.is-3 {
-  font-size: 28px;
+  font-size: 3em;
 }
 
 .title.is-3 code {
-  font-size: 24px;
+  font-size: 2.5em;
 }
 
 .title.is-4 {
-  font-size: 24px;
+  font-size: 2.5em;
 }
 
 .title.is-4 code {
-  font-size: 18px;
+  font-size: 1.8em;
 }
 
 .title.is-5 {
-  font-size: 18px;
+  font-size: 1.8em;
 }
 
 .title.is-5 code {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .title.is-6 {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .title.is-6 code {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .title.is-normal {
@@ -2514,14 +2514,14 @@ a.box:active {
 
 .subtitle {
   color: #4a4a4a;
-  font-size: 18px;
+  font-size: 1.8em;
   line-height: 1.125;
 }
 
 .subtitle code {
   border-radius: 25px;
   display: inline-block;
-  font-size: 14px;
+  font-size: 1em;
   padding: 2px 3px;
   vertical-align: top;
 }
@@ -2535,51 +2535,51 @@ a.box:active {
 }
 
 .subtitle.is-1 {
-  font-size: 48px;
+  font-size: 6em;
 }
 
 .subtitle.is-1 code {
-  font-size: 40px;
+  font-size: 4.2em;
 }
 
 .subtitle.is-2 {
-  font-size: 40px;
+  font-size: 4.2em;
 }
 
 .subtitle.is-2 code {
-  font-size: 28px;
+  font-size: 3em;
 }
 
 .subtitle.is-3 {
-  font-size: 28px;
+  font-size: 3em;
 }
 
 .subtitle.is-3 code {
-  font-size: 24px;
+  font-size: 2.5em;
 }
 
 .subtitle.is-4 {
-  font-size: 24px;
+  font-size: 2.5em;
 }
 
 .subtitle.is-4 code {
-  font-size: 18px;
+  font-size: 1.8em;
 }
 
 .subtitle.is-5 {
-  font-size: 18px;
+  font-size: 1.8em;
 }
 
 .subtitle.is-5 code {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .subtitle.is-6 {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .subtitle.is-6 code {
-  font-size: 14px;
+  font-size: 1em;
 }
 
 .subtitle.is-normal {
@@ -2771,7 +2771,7 @@ a.box:active {
   background-color: whitesmoke;
   border-radius: 290486px;
   display: inline-block;
-  font-size: 18px;
+  font-size: 1.8em;
   vertical-align: top;
 }
 
@@ -2857,14 +2857,14 @@ a.box:active {
 }
 
 .tag.is-medium {
-  font-size: 14px;
+  font-size: 1em;
   height: 32px;
   padding-left: 14px;
   padding-right: 14px;
 }
 
 .tag.is-large {
-  font-size: 18px;
+  font-size: 1.8em;
   height: 40px;
   line-height: 24px;
   padding-left: 18px;
@@ -3296,7 +3296,7 @@ a.box:active {
   background-color: whitesmoke;
   border-radius: 290486px;
   display: inline-block;
-  font-size: 18px;
+  font-size: 1.8em;
   height: 32px;
   line-height: 24px;
   margin-right: 10px;
@@ -3715,7 +3715,7 @@ a.box:active {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 0;
-  font-size: 24px;
+  font-size: 2.5em;
   line-height: 1;
 }
 
@@ -4111,7 +4111,7 @@ a.nav-item.is-tab.is-active {
   border-bottom: 1px solid #dbdbdb;
   border-radius: 4px 4px 0 0;
   color: #363636;
-  font-size: 18px;
+  font-size: 1.8em;
   font-weight: 300;
   padding: 10px;
 }
@@ -4347,7 +4347,7 @@ a.panel-block:hover {
 }
 
 .tabs.is-medium {
-  font-size: 18px;
+  font-size: 1.8em;
 }
 
 .tabs.is-medium a {
@@ -4360,7 +4360,7 @@ a.panel-block:hover {
 }
 
 .tabs.is-large {
-  font-size: 28px;
+  font-size: 3em;
 }
 
 .tabs.is-large a {
@@ -5410,7 +5410,7 @@ a.panel-block:hover {
   -webkit-box-flex: 1;
   flex-grow: 1;
   flex-shrink: 0;
-  padding: 40px 20px;
+  padding: 150px 80px;
 }
 
 @media screen and (min-width: 1240px) {
@@ -6354,8 +6354,8 @@ a.panel-block:hover {
 
 @media screen and (min-width: 769px) {
   .hero.is-medium .hero-body {
-    padding-bottom: 120px;
-    padding-top: 120px;
+    padding-bottom: 200px;
+    padding-top: 200px;
   }
 }
 
@@ -12504,6 +12504,365 @@ a.panel-block:hover {
   margin: 0;
   overflow: visible;
   clip: auto;
+}
+
+.title, .subtitle {
+  font-family: "Shrikhand", "Georgia", serif;
+}
+
+.center-column, .center {
+  display: -webkit-box;
+  display: flex;
+  flex-flow: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.center-row {
+  display: -webkit-box;
+  display: flex;
+  flex-flow: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.columns {
+  padding-top: 1em;
+}
+
+header, footer {
+  padding: 1.5em;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.is-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.has-no-margin {
+  margin: 0;
+}
+
+.is-min-height {
+  min-height: 100vh;
+}
+
+.hero.is-background .title, .hero.is-background .subtitle, .hero.is-background a, .hero.is-background strong, .hero.is-background p, .hero.is-background span, nav.nav.is-background .title, nav.nav.is-background .subtitle, nav.nav.is-background a, nav.nav.is-background strong, nav.nav.is-background p, nav.nav.is-background span, .box.is-background .title, .box.is-background .subtitle, .box.is-background a, .box.is-background strong, .box.is-background p, .box.is-background span, section.footer.is-background .title, section.footer.is-background .subtitle, section.footer.is-background a, section.footer.is-background strong, section.footer.is-background p, section.footer.is-background span {
+  color: white;
+}
+
+.hero.is-background .nav-item .title, .hero.is-background .nav-item .subtitle, .hero.is-background .nav-item a, .hero.is-background .nav-item strong, .hero.is-background .nav-item p, .hero.is-background .nav-item span, nav.nav.is-background .nav-item .title, nav.nav.is-background .nav-item .subtitle, nav.nav.is-background .nav-item a, nav.nav.is-background .nav-item strong, nav.nav.is-background .nav-item p, nav.nav.is-background .nav-item span, .box.is-background .nav-item .title, .box.is-background .nav-item .subtitle, .box.is-background .nav-item a, .box.is-background .nav-item strong, .box.is-background .nav-item p, .box.is-background .nav-item span, section.footer.is-background .nav-item .title, section.footer.is-background .nav-item .subtitle, section.footer.is-background .nav-item a, section.footer.is-background .nav-item strong, section.footer.is-background .nav-item p, section.footer.is-background .nav-item span {
+  color: white;
+}
+
+.hero.is-background .hero-body .box .title, .hero.is-background .hero-body .box .subtitle, .hero.is-background .hero-body .box a, .hero.is-background .hero-body .box strong, .hero.is-background .hero-body .box p, nav.nav.is-background .hero-body .box .title, nav.nav.is-background .hero-body .box .subtitle, nav.nav.is-background .hero-body .box a, nav.nav.is-background .hero-body .box strong, nav.nav.is-background .hero-body .box p, .box.is-background .hero-body .box .title, .box.is-background .hero-body .box .subtitle, .box.is-background .hero-body .box a, .box.is-background .hero-body .box strong, .box.is-background .hero-body .box p, section.footer.is-background .hero-body .box .title, section.footer.is-background .hero-body .box .subtitle, section.footer.is-background .hero-body .box a, section.footer.is-background .hero-body .box strong, section.footer.is-background .hero-body .box p {
+  color: #0a0a0a;
+}
+
+.hero.is-white .title, .hero.is-white .subtitle, .hero.is-white a, .hero.is-white strong, .hero.is-white p, .hero.is-white span, nav.nav.is-white .title, nav.nav.is-white .subtitle, nav.nav.is-white a, nav.nav.is-white strong, nav.nav.is-white p, nav.nav.is-white span, .box.is-white .title, .box.is-white .subtitle, .box.is-white a, .box.is-white strong, .box.is-white p, .box.is-white span, section.footer.is-white .title, section.footer.is-white .subtitle, section.footer.is-white a, section.footer.is-white strong, section.footer.is-white p, section.footer.is-white span {
+  color: #0a0a0a;
+}
+
+.hero.is-white .nav-item .title, .hero.is-white .nav-item .subtitle, .hero.is-white .nav-item a, .hero.is-white .nav-item strong, .hero.is-white .nav-item p, .hero.is-white .nav-item span, nav.nav.is-white .nav-item .title, nav.nav.is-white .nav-item .subtitle, nav.nav.is-white .nav-item a, nav.nav.is-white .nav-item strong, nav.nav.is-white .nav-item p, nav.nav.is-white .nav-item span, .box.is-white .nav-item .title, .box.is-white .nav-item .subtitle, .box.is-white .nav-item a, .box.is-white .nav-item strong, .box.is-white .nav-item p, .box.is-white .nav-item span, section.footer.is-white .nav-item .title, section.footer.is-white .nav-item .subtitle, section.footer.is-white .nav-item a, section.footer.is-white .nav-item strong, section.footer.is-white .nav-item p, section.footer.is-white .nav-item span {
+  color: #0a0a0a;
+}
+
+.hero.is-white .hero-body .box .title, .hero.is-white .hero-body .box .subtitle, .hero.is-white .hero-body .box a, .hero.is-white .hero-body .box strong, .hero.is-white .hero-body .box p, nav.nav.is-white .hero-body .box .title, nav.nav.is-white .hero-body .box .subtitle, nav.nav.is-white .hero-body .box a, nav.nav.is-white .hero-body .box strong, nav.nav.is-white .hero-body .box p, .box.is-white .hero-body .box .title, .box.is-white .hero-body .box .subtitle, .box.is-white .hero-body .box a, .box.is-white .hero-body .box strong, .box.is-white .hero-body .box p, section.footer.is-white .hero-body .box .title, section.footer.is-white .hero-body .box .subtitle, section.footer.is-white .hero-body .box a, section.footer.is-white .hero-body .box strong, section.footer.is-white .hero-body .box p {
+  color: white;
+}
+
+.hero.is-black .title, .hero.is-black .subtitle, .hero.is-black a, .hero.is-black strong, .hero.is-black p, .hero.is-black span, nav.nav.is-black .title, nav.nav.is-black .subtitle, nav.nav.is-black a, nav.nav.is-black strong, nav.nav.is-black p, nav.nav.is-black span, .box.is-black .title, .box.is-black .subtitle, .box.is-black a, .box.is-black strong, .box.is-black p, .box.is-black span, section.footer.is-black .title, section.footer.is-black .subtitle, section.footer.is-black a, section.footer.is-black strong, section.footer.is-black p, section.footer.is-black span {
+  color: white;
+}
+
+.hero.is-black .nav-item .title, .hero.is-black .nav-item .subtitle, .hero.is-black .nav-item a, .hero.is-black .nav-item strong, .hero.is-black .nav-item p, .hero.is-black .nav-item span, nav.nav.is-black .nav-item .title, nav.nav.is-black .nav-item .subtitle, nav.nav.is-black .nav-item a, nav.nav.is-black .nav-item strong, nav.nav.is-black .nav-item p, nav.nav.is-black .nav-item span, .box.is-black .nav-item .title, .box.is-black .nav-item .subtitle, .box.is-black .nav-item a, .box.is-black .nav-item strong, .box.is-black .nav-item p, .box.is-black .nav-item span, section.footer.is-black .nav-item .title, section.footer.is-black .nav-item .subtitle, section.footer.is-black .nav-item a, section.footer.is-black .nav-item strong, section.footer.is-black .nav-item p, section.footer.is-black .nav-item span {
+  color: white;
+}
+
+.hero.is-black .hero-body .box .title, .hero.is-black .hero-body .box .subtitle, .hero.is-black .hero-body .box a, .hero.is-black .hero-body .box strong, .hero.is-black .hero-body .box p, nav.nav.is-black .hero-body .box .title, nav.nav.is-black .hero-body .box .subtitle, nav.nav.is-black .hero-body .box a, nav.nav.is-black .hero-body .box strong, nav.nav.is-black .hero-body .box p, .box.is-black .hero-body .box .title, .box.is-black .hero-body .box .subtitle, .box.is-black .hero-body .box a, .box.is-black .hero-body .box strong, .box.is-black .hero-body .box p, section.footer.is-black .hero-body .box .title, section.footer.is-black .hero-body .box .subtitle, section.footer.is-black .hero-body .box a, section.footer.is-black .hero-body .box strong, section.footer.is-black .hero-body .box p {
+  color: #0a0a0a;
+}
+
+.hero.is-light .title, .hero.is-light .subtitle, .hero.is-light a, .hero.is-light strong, .hero.is-light p, .hero.is-light span, nav.nav.is-light .title, nav.nav.is-light .subtitle, nav.nav.is-light a, nav.nav.is-light strong, nav.nav.is-light p, nav.nav.is-light span, .box.is-light .title, .box.is-light .subtitle, .box.is-light a, .box.is-light strong, .box.is-light p, .box.is-light span, section.footer.is-light .title, section.footer.is-light .subtitle, section.footer.is-light a, section.footer.is-light strong, section.footer.is-light p, section.footer.is-light span {
+  color: #363636;
+}
+
+.hero.is-light .nav-item .title, .hero.is-light .nav-item .subtitle, .hero.is-light .nav-item a, .hero.is-light .nav-item strong, .hero.is-light .nav-item p, .hero.is-light .nav-item span, nav.nav.is-light .nav-item .title, nav.nav.is-light .nav-item .subtitle, nav.nav.is-light .nav-item a, nav.nav.is-light .nav-item strong, nav.nav.is-light .nav-item p, nav.nav.is-light .nav-item span, .box.is-light .nav-item .title, .box.is-light .nav-item .subtitle, .box.is-light .nav-item a, .box.is-light .nav-item strong, .box.is-light .nav-item p, .box.is-light .nav-item span, section.footer.is-light .nav-item .title, section.footer.is-light .nav-item .subtitle, section.footer.is-light .nav-item a, section.footer.is-light .nav-item strong, section.footer.is-light .nav-item p, section.footer.is-light .nav-item span {
+  color: #363636;
+}
+
+.hero.is-light .hero-body .box .title, .hero.is-light .hero-body .box .subtitle, .hero.is-light .hero-body .box a, .hero.is-light .hero-body .box strong, .hero.is-light .hero-body .box p, nav.nav.is-light .hero-body .box .title, nav.nav.is-light .hero-body .box .subtitle, nav.nav.is-light .hero-body .box a, nav.nav.is-light .hero-body .box strong, nav.nav.is-light .hero-body .box p, .box.is-light .hero-body .box .title, .box.is-light .hero-body .box .subtitle, .box.is-light .hero-body .box a, .box.is-light .hero-body .box strong, .box.is-light .hero-body .box p, section.footer.is-light .hero-body .box .title, section.footer.is-light .hero-body .box .subtitle, section.footer.is-light .hero-body .box a, section.footer.is-light .hero-body .box strong, section.footer.is-light .hero-body .box p {
+  color: whitesmoke;
+}
+
+.hero.is-dark .title, .hero.is-dark .subtitle, .hero.is-dark a, .hero.is-dark strong, .hero.is-dark p, .hero.is-dark span, nav.nav.is-dark .title, nav.nav.is-dark .subtitle, nav.nav.is-dark a, nav.nav.is-dark strong, nav.nav.is-dark p, nav.nav.is-dark span, .box.is-dark .title, .box.is-dark .subtitle, .box.is-dark a, .box.is-dark strong, .box.is-dark p, .box.is-dark span, section.footer.is-dark .title, section.footer.is-dark .subtitle, section.footer.is-dark a, section.footer.is-dark strong, section.footer.is-dark p, section.footer.is-dark span {
+  color: whitesmoke;
+}
+
+.hero.is-dark .nav-item .title, .hero.is-dark .nav-item .subtitle, .hero.is-dark .nav-item a, .hero.is-dark .nav-item strong, .hero.is-dark .nav-item p, .hero.is-dark .nav-item span, nav.nav.is-dark .nav-item .title, nav.nav.is-dark .nav-item .subtitle, nav.nav.is-dark .nav-item a, nav.nav.is-dark .nav-item strong, nav.nav.is-dark .nav-item p, nav.nav.is-dark .nav-item span, .box.is-dark .nav-item .title, .box.is-dark .nav-item .subtitle, .box.is-dark .nav-item a, .box.is-dark .nav-item strong, .box.is-dark .nav-item p, .box.is-dark .nav-item span, section.footer.is-dark .nav-item .title, section.footer.is-dark .nav-item .subtitle, section.footer.is-dark .nav-item a, section.footer.is-dark .nav-item strong, section.footer.is-dark .nav-item p, section.footer.is-dark .nav-item span {
+  color: whitesmoke;
+}
+
+.hero.is-dark .hero-body .box .title, .hero.is-dark .hero-body .box .subtitle, .hero.is-dark .hero-body .box a, .hero.is-dark .hero-body .box strong, .hero.is-dark .hero-body .box p, nav.nav.is-dark .hero-body .box .title, nav.nav.is-dark .hero-body .box .subtitle, nav.nav.is-dark .hero-body .box a, nav.nav.is-dark .hero-body .box strong, nav.nav.is-dark .hero-body .box p, .box.is-dark .hero-body .box .title, .box.is-dark .hero-body .box .subtitle, .box.is-dark .hero-body .box a, .box.is-dark .hero-body .box strong, .box.is-dark .hero-body .box p, section.footer.is-dark .hero-body .box .title, section.footer.is-dark .hero-body .box .subtitle, section.footer.is-dark .hero-body .box a, section.footer.is-dark .hero-body .box strong, section.footer.is-dark .hero-body .box p {
+  color: #363636;
+}
+
+.hero.is-primary .title, .hero.is-primary .subtitle, .hero.is-primary a, .hero.is-primary strong, .hero.is-primary p, .hero.is-primary span, nav.nav.is-primary .title, nav.nav.is-primary .subtitle, nav.nav.is-primary a, nav.nav.is-primary strong, nav.nav.is-primary p, nav.nav.is-primary span, .box.is-primary .title, .box.is-primary .subtitle, .box.is-primary a, .box.is-primary strong, .box.is-primary p, .box.is-primary span, section.footer.is-primary .title, section.footer.is-primary .subtitle, section.footer.is-primary a, section.footer.is-primary strong, section.footer.is-primary p, section.footer.is-primary span {
+  color: white;
+}
+
+.hero.is-primary .nav-item .title, .hero.is-primary .nav-item .subtitle, .hero.is-primary .nav-item a, .hero.is-primary .nav-item strong, .hero.is-primary .nav-item p, .hero.is-primary .nav-item span, nav.nav.is-primary .nav-item .title, nav.nav.is-primary .nav-item .subtitle, nav.nav.is-primary .nav-item a, nav.nav.is-primary .nav-item strong, nav.nav.is-primary .nav-item p, nav.nav.is-primary .nav-item span, .box.is-primary .nav-item .title, .box.is-primary .nav-item .subtitle, .box.is-primary .nav-item a, .box.is-primary .nav-item strong, .box.is-primary .nav-item p, .box.is-primary .nav-item span, section.footer.is-primary .nav-item .title, section.footer.is-primary .nav-item .subtitle, section.footer.is-primary .nav-item a, section.footer.is-primary .nav-item strong, section.footer.is-primary .nav-item p, section.footer.is-primary .nav-item span {
+  color: white;
+}
+
+.hero.is-primary .hero-body .box .title, .hero.is-primary .hero-body .box .subtitle, .hero.is-primary .hero-body .box a, .hero.is-primary .hero-body .box strong, .hero.is-primary .hero-body .box p, nav.nav.is-primary .hero-body .box .title, nav.nav.is-primary .hero-body .box .subtitle, nav.nav.is-primary .hero-body .box a, nav.nav.is-primary .hero-body .box strong, nav.nav.is-primary .hero-body .box p, .box.is-primary .hero-body .box .title, .box.is-primary .hero-body .box .subtitle, .box.is-primary .hero-body .box a, .box.is-primary .hero-body .box strong, .box.is-primary .hero-body .box p, section.footer.is-primary .hero-body .box .title, section.footer.is-primary .hero-body .box .subtitle, section.footer.is-primary .hero-body .box a, section.footer.is-primary .hero-body .box strong, section.footer.is-primary .hero-body .box p {
+  color: #ff470f;
+}
+
+.hero.is-info .title, .hero.is-info .subtitle, .hero.is-info a, .hero.is-info strong, .hero.is-info p, .hero.is-info span, nav.nav.is-info .title, nav.nav.is-info .subtitle, nav.nav.is-info a, nav.nav.is-info strong, nav.nav.is-info p, nav.nav.is-info span, .box.is-info .title, .box.is-info .subtitle, .box.is-info a, .box.is-info strong, .box.is-info p, .box.is-info span, section.footer.is-info .title, section.footer.is-info .subtitle, section.footer.is-info a, section.footer.is-info strong, section.footer.is-info p, section.footer.is-info span {
+  color: white;
+}
+
+.hero.is-info .nav-item .title, .hero.is-info .nav-item .subtitle, .hero.is-info .nav-item a, .hero.is-info .nav-item strong, .hero.is-info .nav-item p, .hero.is-info .nav-item span, nav.nav.is-info .nav-item .title, nav.nav.is-info .nav-item .subtitle, nav.nav.is-info .nav-item a, nav.nav.is-info .nav-item strong, nav.nav.is-info .nav-item p, nav.nav.is-info .nav-item span, .box.is-info .nav-item .title, .box.is-info .nav-item .subtitle, .box.is-info .nav-item a, .box.is-info .nav-item strong, .box.is-info .nav-item p, .box.is-info .nav-item span, section.footer.is-info .nav-item .title, section.footer.is-info .nav-item .subtitle, section.footer.is-info .nav-item a, section.footer.is-info .nav-item strong, section.footer.is-info .nav-item p, section.footer.is-info .nav-item span {
+  color: white;
+}
+
+.hero.is-info .hero-body .box .title, .hero.is-info .hero-body .box .subtitle, .hero.is-info .hero-body .box a, .hero.is-info .hero-body .box strong, .hero.is-info .hero-body .box p, nav.nav.is-info .hero-body .box .title, nav.nav.is-info .hero-body .box .subtitle, nav.nav.is-info .hero-body .box a, nav.nav.is-info .hero-body .box strong, nav.nav.is-info .hero-body .box p, .box.is-info .hero-body .box .title, .box.is-info .hero-body .box .subtitle, .box.is-info .hero-body .box a, .box.is-info .hero-body .box strong, .box.is-info .hero-body .box p, section.footer.is-info .hero-body .box .title, section.footer.is-info .hero-body .box .subtitle, section.footer.is-info .hero-body .box a, section.footer.is-info .hero-body .box strong, section.footer.is-info .hero-body .box p {
+  color: #3273dc;
+}
+
+.hero.is-success .title, .hero.is-success .subtitle, .hero.is-success a, .hero.is-success strong, .hero.is-success p, .hero.is-success span, nav.nav.is-success .title, nav.nav.is-success .subtitle, nav.nav.is-success a, nav.nav.is-success strong, nav.nav.is-success p, nav.nav.is-success span, .box.is-success .title, .box.is-success .subtitle, .box.is-success a, .box.is-success strong, .box.is-success p, .box.is-success span, section.footer.is-success .title, section.footer.is-success .subtitle, section.footer.is-success a, section.footer.is-success strong, section.footer.is-success p, section.footer.is-success span {
+  color: white;
+}
+
+.hero.is-success .nav-item .title, .hero.is-success .nav-item .subtitle, .hero.is-success .nav-item a, .hero.is-success .nav-item strong, .hero.is-success .nav-item p, .hero.is-success .nav-item span, nav.nav.is-success .nav-item .title, nav.nav.is-success .nav-item .subtitle, nav.nav.is-success .nav-item a, nav.nav.is-success .nav-item strong, nav.nav.is-success .nav-item p, nav.nav.is-success .nav-item span, .box.is-success .nav-item .title, .box.is-success .nav-item .subtitle, .box.is-success .nav-item a, .box.is-success .nav-item strong, .box.is-success .nav-item p, .box.is-success .nav-item span, section.footer.is-success .nav-item .title, section.footer.is-success .nav-item .subtitle, section.footer.is-success .nav-item a, section.footer.is-success .nav-item strong, section.footer.is-success .nav-item p, section.footer.is-success .nav-item span {
+  color: white;
+}
+
+.hero.is-success .hero-body .box .title, .hero.is-success .hero-body .box .subtitle, .hero.is-success .hero-body .box a, .hero.is-success .hero-body .box strong, .hero.is-success .hero-body .box p, nav.nav.is-success .hero-body .box .title, nav.nav.is-success .hero-body .box .subtitle, nav.nav.is-success .hero-body .box a, nav.nav.is-success .hero-body .box strong, nav.nav.is-success .hero-body .box p, .box.is-success .hero-body .box .title, .box.is-success .hero-body .box .subtitle, .box.is-success .hero-body .box a, .box.is-success .hero-body .box strong, .box.is-success .hero-body .box p, section.footer.is-success .hero-body .box .title, section.footer.is-success .hero-body .box .subtitle, section.footer.is-success .hero-body .box a, section.footer.is-success .hero-body .box strong, section.footer.is-success .hero-body .box p {
+  color: #23d160;
+}
+
+.hero.is-warning .title, .hero.is-warning .subtitle, .hero.is-warning a, .hero.is-warning strong, .hero.is-warning p, .hero.is-warning span, nav.nav.is-warning .title, nav.nav.is-warning .subtitle, nav.nav.is-warning a, nav.nav.is-warning strong, nav.nav.is-warning p, nav.nav.is-warning span, .box.is-warning .title, .box.is-warning .subtitle, .box.is-warning a, .box.is-warning strong, .box.is-warning p, .box.is-warning span, section.footer.is-warning .title, section.footer.is-warning .subtitle, section.footer.is-warning a, section.footer.is-warning strong, section.footer.is-warning p, section.footer.is-warning span {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.hero.is-warning .nav-item .title, .hero.is-warning .nav-item .subtitle, .hero.is-warning .nav-item a, .hero.is-warning .nav-item strong, .hero.is-warning .nav-item p, .hero.is-warning .nav-item span, nav.nav.is-warning .nav-item .title, nav.nav.is-warning .nav-item .subtitle, nav.nav.is-warning .nav-item a, nav.nav.is-warning .nav-item strong, nav.nav.is-warning .nav-item p, nav.nav.is-warning .nav-item span, .box.is-warning .nav-item .title, .box.is-warning .nav-item .subtitle, .box.is-warning .nav-item a, .box.is-warning .nav-item strong, .box.is-warning .nav-item p, .box.is-warning .nav-item span, section.footer.is-warning .nav-item .title, section.footer.is-warning .nav-item .subtitle, section.footer.is-warning .nav-item a, section.footer.is-warning .nav-item strong, section.footer.is-warning .nav-item p, section.footer.is-warning .nav-item span {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.hero.is-warning .hero-body .box .title, .hero.is-warning .hero-body .box .subtitle, .hero.is-warning .hero-body .box a, .hero.is-warning .hero-body .box strong, .hero.is-warning .hero-body .box p, nav.nav.is-warning .hero-body .box .title, nav.nav.is-warning .hero-body .box .subtitle, nav.nav.is-warning .hero-body .box a, nav.nav.is-warning .hero-body .box strong, nav.nav.is-warning .hero-body .box p, .box.is-warning .hero-body .box .title, .box.is-warning .hero-body .box .subtitle, .box.is-warning .hero-body .box a, .box.is-warning .hero-body .box strong, .box.is-warning .hero-body .box p, section.footer.is-warning .hero-body .box .title, section.footer.is-warning .hero-body .box .subtitle, section.footer.is-warning .hero-body .box a, section.footer.is-warning .hero-body .box strong, section.footer.is-warning .hero-body .box p {
+  color: #ffdd57;
+}
+
+.hero.is-danger .title, .hero.is-danger .subtitle, .hero.is-danger a, .hero.is-danger strong, .hero.is-danger p, .hero.is-danger span, nav.nav.is-danger .title, nav.nav.is-danger .subtitle, nav.nav.is-danger a, nav.nav.is-danger strong, nav.nav.is-danger p, nav.nav.is-danger span, .box.is-danger .title, .box.is-danger .subtitle, .box.is-danger a, .box.is-danger strong, .box.is-danger p, .box.is-danger span, section.footer.is-danger .title, section.footer.is-danger .subtitle, section.footer.is-danger a, section.footer.is-danger strong, section.footer.is-danger p, section.footer.is-danger span {
+  color: white;
+}
+
+.hero.is-danger .nav-item .title, .hero.is-danger .nav-item .subtitle, .hero.is-danger .nav-item a, .hero.is-danger .nav-item strong, .hero.is-danger .nav-item p, .hero.is-danger .nav-item span, nav.nav.is-danger .nav-item .title, nav.nav.is-danger .nav-item .subtitle, nav.nav.is-danger .nav-item a, nav.nav.is-danger .nav-item strong, nav.nav.is-danger .nav-item p, nav.nav.is-danger .nav-item span, .box.is-danger .nav-item .title, .box.is-danger .nav-item .subtitle, .box.is-danger .nav-item a, .box.is-danger .nav-item strong, .box.is-danger .nav-item p, .box.is-danger .nav-item span, section.footer.is-danger .nav-item .title, section.footer.is-danger .nav-item .subtitle, section.footer.is-danger .nav-item a, section.footer.is-danger .nav-item strong, section.footer.is-danger .nav-item p, section.footer.is-danger .nav-item span {
+  color: white;
+}
+
+.hero.is-danger .hero-body .box .title, .hero.is-danger .hero-body .box .subtitle, .hero.is-danger .hero-body .box a, .hero.is-danger .hero-body .box strong, .hero.is-danger .hero-body .box p, nav.nav.is-danger .hero-body .box .title, nav.nav.is-danger .hero-body .box .subtitle, nav.nav.is-danger .hero-body .box a, nav.nav.is-danger .hero-body .box strong, nav.nav.is-danger .hero-body .box p, .box.is-danger .hero-body .box .title, .box.is-danger .hero-body .box .subtitle, .box.is-danger .hero-body .box a, .box.is-danger .hero-body .box strong, .box.is-danger .hero-body .box p, section.footer.is-danger .hero-body .box .title, section.footer.is-danger .hero-body .box .subtitle, section.footer.is-danger .hero-body .box a, section.footer.is-danger .hero-body .box strong, section.footer.is-danger .hero-body .box p {
+  color: #ff3860;
+}
+
+.hero-body {
+  width: 100%;
+  padding: 150px 1em;
+}
+
+.is-background {
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.is-background .hero-body, .is-background .body {
+  height: 100%;
+  background: rgba(10, 10, 10, 0.35);
+}
+
+.has-transition {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+body {
+  font-size: 9px;
+  min-height: 100vh;
+  font-family: "Shrikhand", "Georgia", serif;
+  letter-spacing: -0.08em;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+.wrapper {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.button {
+  background: none;
+  font-family: "Shrikhand", "Georgia", serif;
+}
+
+.box .body {
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.box.featured-tickets {
+  border-radius: 0px;
+  border: none;
+  box-shadow: none;
+  height: 250px;
+}
+
+.box.featured-tickets header {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.box.featured-tickets footer {
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+}
+
+input.input {
+  font-size: 2em;
+  font-family: "Shrikhand", "Georgia", serif;
+  padding: 1.4em 1.5em;
+}
+
+.search.search-main-menu {
+  margin: 0 0.3em;
+  font-size: 2em;
+  font-family: "Shrikhand", "Georgia", serif;
+  height: 40px;
+  padding: 1em;
+}
+
+.hero.hero-primary {
+  padding-top: 3em;
+}
+
+section.header {
+  z-index: 2;
+}
+
+nav.nav {
+  background: none;
+  padding: 1.5em;
+}
+
+nav.nav.reduce {
+  background: rgba(10, 10, 10, 0.85);
+  padding: 0;
+}
+
+nav.nav.reduce input.search-main-menu, nav.nav.reduce a.button.is-medium {
+  font-size: 16px;
+}
+
+.nav-main-menu {
+  display: none;
+}
+
+@media all and (min-width: 40em) {
+  .nav-main-menu {
+    display: block;
+  }
+}
+
+.notifications-hold {
+  background: none;
+  margin: 0;
+  padding: 0 10vw;
+  z-index: 999;
+}
+
+.notification .title {
+  margin-bottom: 0;
+}
+
+.notification button {
+  margin: 0 1em;
+}
+
+section.footer {
+  background: #121212;
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+.animated.animatedSlide {
+  -webkit-transform: translateY(-800px);
+  transform: translateY(-800px);
+}
+
+.animated.animatedSlide.slideOutUp {
+  -webkit-animation-duration: 200ms;
+  animation-duration: 200ms;
+}
+
+.bounceInDown {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+.bounce-enter-active {
+  -webkit-animation: bounceInDown .3s;
+  animation: bounceInDown .3s;
+}
+
+.bounce-leave-active {
+  -webkit-animation: bounceOutUp .3s;
+  animation: bounceOutUp .3s;
+}
+
+.flip-list-move {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.list-complete-item {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.list-complete-enter, .list-complete-leave-active {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+}
+
+.list-complete-leave-active {
+  position: absolute;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -2,6 +2,13 @@
 
 @section('container')
 
-    @yield('content')
+    @include('components._primary-header')
+
+    <div class="wrapper">
+        @yield('content')
+
+        @include('components._primary-footer')
+
+    </div>
 
 @endsection

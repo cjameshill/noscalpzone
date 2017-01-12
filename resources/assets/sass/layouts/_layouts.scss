@@ -1,0 +1,18 @@
+///// LAYOUTS
+
+body {
+  font-size: 9px;
+  min-height: 100vh;
+  font-family: $family-serif;
+  letter-spacing: -0.08em;
+
+  @include mobile(){
+    font-size: 12px;
+  }
+}
+
+.wrapper {
+  display: block;
+  position: relative;
+  z-index: index($elements, wrapper);
+}
