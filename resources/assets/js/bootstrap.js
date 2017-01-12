@@ -1,14 +1,14 @@
-
+//
 window._ = require('lodash');
-
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
+//
+// /**
+//  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+//  * for JavaScript based Bootstrap features such as modals and tabs. This
+//  * code may be modified to fit the specific needs of your application.
+//  */
+//
 window.$ = window.jQuery = require('jquery');
-require('bootstrap-sass');
+// require('bootstrap-sass');
 
 /**
  * Vue is a modern JavaScript library for building interactive web interfaces
@@ -17,7 +17,17 @@ require('bootstrap-sass');
  */
 
 window.Vue = require('vue');
-require('vue-resource');
+window.axios = require('axios');
+
+Vue.prototype.$http = axios;
+
+import Validations from 'vuelidate';
+
+Vue.use(Validations);
+
+// require('moment');
+// Vue.use(require('vue-moment'));
+
 
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
@@ -25,11 +35,15 @@ require('vue-resource');
  * included with Laravel will automatically verify the header's value.
  */
 
-Vue.http.interceptors.push((request, next) => {
-    request.headers.set('X-CSRF-TOKEN', Laravel.csrfToken);
+window.axios.defaults.headers.common = {
+    'X-Requested-With': 'XMLHttpRequest'
+};
 
-    next();
-});
+// Vue.http.interceptors.push((request, next) => {
+//     request.headers.set('X-CSRF-TOKEN', Sandbox.csrfToken);
+//
+//     next();
+// });
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
@@ -43,3 +57,5 @@ Vue.http.interceptors.push((request, next) => {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
+
+
