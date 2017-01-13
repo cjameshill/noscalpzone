@@ -28,3 +28,13 @@ Route::group(['prefix' => 'performers', 'name' => 'performers'], function (){
 });
 
 
+///// API /////
+
+Route::group(['prefix' => 'api', 'name' => 'api'], function (){
+
+    ///// MENU /////
+
+    Route::get('/menu/{tag?}', 'MenuController@eventsAndPerformers');
+});
+
+

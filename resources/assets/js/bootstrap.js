@@ -25,8 +25,7 @@ import Validations from 'vuelidate';
 
 Vue.use(Validations);
 
-// require('moment');
-// Vue.use(require('vue-moment'));
+window.moment = require('moment');
 
 
 /**
@@ -39,11 +38,6 @@ window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
 
-// Vue.http.interceptors.push((request, next) => {
-//     request.headers.set('X-CSRF-TOKEN', Sandbox.csrfToken);
-//
-//     next();
-// });
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

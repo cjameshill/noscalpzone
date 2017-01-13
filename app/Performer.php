@@ -2,13 +2,14 @@
 
 namespace App;
 
+use App\Traits\ModelScopes;
 use App\Traits\WithProfiles;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Performer extends Model
 {
-    use SoftDeletes, WithProfiles;
+    use SoftDeletes, WithProfiles, ModelScopes;
 
     protected $table = 'performers';
 

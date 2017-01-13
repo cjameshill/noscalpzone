@@ -61,12 +61,12 @@ header, footer {
     .title, .subtitle, a, strong, p, span {
       color: $color-invert;
     }
-    .hero-body .box, header, footer {
+    .hero-body .box {
       .title, .subtitle, a, strong, p {
         color: $color;
       }
     }
-    .button {
+    .button, header, footer {
       .title, .subtitle, a, strong, p, span {
         color: $color-invert;
       }
@@ -114,6 +114,7 @@ header, footer {
       .buy-button {
         background: $color;
         color: $color-invert;
+        border: none;
       }
 
       .event-date {

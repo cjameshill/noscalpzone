@@ -1,5 +1,9 @@
 //// ANIMATIONS
 
+.animated {
+  animation-duration: 100ms;
+}
+
 .animated.animatedSlide {
   transform: translateY(-800px);
 }

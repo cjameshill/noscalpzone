@@ -12567,11 +12567,11 @@ header, footer {
   color: white;
 }
 
-.is-background .hero-body .box .title, .is-background .hero-body .box .subtitle, .is-background .hero-body .box a, .is-background .hero-body .box strong, .is-background .hero-body .box p, .is-background header .title, .is-background header .subtitle, .is-background header a, .is-background header strong, .is-background header p, .is-background footer .title, .is-background footer .subtitle, .is-background footer a, .is-background footer strong, .is-background footer p {
+.is-background .hero-body .box .title, .is-background .hero-body .box .subtitle, .is-background .hero-body .box a, .is-background .hero-body .box strong, .is-background .hero-body .box p {
   color: #0a0a0a;
 }
 
-.is-background .button .title, .is-background .button .subtitle, .is-background .button a, .is-background .button strong, .is-background .button p, .is-background .button span {
+.is-background .button .title, .is-background .button .subtitle, .is-background .button a, .is-background .button strong, .is-background .button p, .is-background .button span, .is-background header .title, .is-background header .subtitle, .is-background header a, .is-background header strong, .is-background header p, .is-background header span, .is-background footer .title, .is-background footer .subtitle, .is-background footer a, .is-background footer strong, .is-background footer p, .is-background footer span {
   color: white;
 }
 
@@ -12579,11 +12579,11 @@ header, footer {
   color: #0a0a0a;
 }
 
-.is-white .hero-body .box .title, .is-white .hero-body .box .subtitle, .is-white .hero-body .box a, .is-white .hero-body .box strong, .is-white .hero-body .box p, .is-white header .title, .is-white header .subtitle, .is-white header a, .is-white header strong, .is-white header p, .is-white footer .title, .is-white footer .subtitle, .is-white footer a, .is-white footer strong, .is-white footer p {
+.is-white .hero-body .box .title, .is-white .hero-body .box .subtitle, .is-white .hero-body .box a, .is-white .hero-body .box strong, .is-white .hero-body .box p {
   color: white;
 }
 
-.is-white .button .title, .is-white .button .subtitle, .is-white .button a, .is-white .button strong, .is-white .button p, .is-white .button span {
+.is-white .button .title, .is-white .button .subtitle, .is-white .button a, .is-white .button strong, .is-white .button p, .is-white .button span, .is-white header .title, .is-white header .subtitle, .is-white header a, .is-white header strong, .is-white header p, .is-white header span, .is-white footer .title, .is-white footer .subtitle, .is-white footer a, .is-white footer strong, .is-white footer p, .is-white footer span {
   color: #0a0a0a;
 }
 
@@ -12591,11 +12591,11 @@ header, footer {
   color: white;
 }
 
-.is-black .hero-body .box .title, .is-black .hero-body .box .subtitle, .is-black .hero-body .box a, .is-black .hero-body .box strong, .is-black .hero-body .box p, .is-black header .title, .is-black header .subtitle, .is-black header a, .is-black header strong, .is-black header p, .is-black footer .title, .is-black footer .subtitle, .is-black footer a, .is-black footer strong, .is-black footer p {
+.is-black .hero-body .box .title, .is-black .hero-body .box .subtitle, .is-black .hero-body .box a, .is-black .hero-body .box strong, .is-black .hero-body .box p {
   color: #0a0a0a;
 }
 
-.is-black .button .title, .is-black .button .subtitle, .is-black .button a, .is-black .button strong, .is-black .button p, .is-black .button span {
+.is-black .button .title, .is-black .button .subtitle, .is-black .button a, .is-black .button strong, .is-black .button p, .is-black .button span, .is-black header .title, .is-black header .subtitle, .is-black header a, .is-black header strong, .is-black header p, .is-black header span, .is-black footer .title, .is-black footer .subtitle, .is-black footer a, .is-black footer strong, .is-black footer p, .is-black footer span {
   color: white;
 }
 
@@ -12603,11 +12603,11 @@ header, footer {
   color: #363636;
 }
 
-.is-light .hero-body .box .title, .is-light .hero-body .box .subtitle, .is-light .hero-body .box a, .is-light .hero-body .box strong, .is-light .hero-body .box p, .is-light header .title, .is-light header .subtitle, .is-light header a, .is-light header strong, .is-light header p, .is-light footer .title, .is-light footer .subtitle, .is-light footer a, .is-light footer strong, .is-light footer p {
+.is-light .hero-body .box .title, .is-light .hero-body .box .subtitle, .is-light .hero-body .box a, .is-light .hero-body .box strong, .is-light .hero-body .box p {
   color: whitesmoke;
 }
 
-.is-light .button .title, .is-light .button .subtitle, .is-light .button a, .is-light .button strong, .is-light .button p, .is-light .button span {
+.is-light .button .title, .is-light .button .subtitle, .is-light .button a, .is-light .button strong, .is-light .button p, .is-light .button span, .is-light header .title, .is-light header .subtitle, .is-light header a, .is-light header strong, .is-light header p, .is-light header span, .is-light footer .title, .is-light footer .subtitle, .is-light footer a, .is-light footer strong, .is-light footer p, .is-light footer span {
   color: #363636;
 }
 
@@ -12615,11 +12615,11 @@ header, footer {
   color: whitesmoke;
 }
 
-.is-dark .hero-body .box .title, .is-dark .hero-body .box .subtitle, .is-dark .hero-body .box a, .is-dark .hero-body .box strong, .is-dark .hero-body .box p, .is-dark header .title, .is-dark header .subtitle, .is-dark header a, .is-dark header strong, .is-dark header p, .is-dark footer .title, .is-dark footer .subtitle, .is-dark footer a, .is-dark footer strong, .is-dark footer p {
+.is-dark .hero-body .box .title, .is-dark .hero-body .box .subtitle, .is-dark .hero-body .box a, .is-dark .hero-body .box strong, .is-dark .hero-body .box p {
   color: #363636;
 }
 
-.is-dark .button .title, .is-dark .button .subtitle, .is-dark .button a, .is-dark .button strong, .is-dark .button p, .is-dark .button span {
+.is-dark .button .title, .is-dark .button .subtitle, .is-dark .button a, .is-dark .button strong, .is-dark .button p, .is-dark .button span, .is-dark header .title, .is-dark header .subtitle, .is-dark header a, .is-dark header strong, .is-dark header p, .is-dark header span, .is-dark footer .title, .is-dark footer .subtitle, .is-dark footer a, .is-dark footer strong, .is-dark footer p, .is-dark footer span {
   color: whitesmoke;
 }
 
@@ -12627,11 +12627,11 @@ header, footer {
   color: white;
 }
 
-.is-primary .hero-body .box .title, .is-primary .hero-body .box .subtitle, .is-primary .hero-body .box a, .is-primary .hero-body .box strong, .is-primary .hero-body .box p, .is-primary header .title, .is-primary header .subtitle, .is-primary header a, .is-primary header strong, .is-primary header p, .is-primary footer .title, .is-primary footer .subtitle, .is-primary footer a, .is-primary footer strong, .is-primary footer p {
+.is-primary .hero-body .box .title, .is-primary .hero-body .box .subtitle, .is-primary .hero-body .box a, .is-primary .hero-body .box strong, .is-primary .hero-body .box p {
   color: #ff470f;
 }
 
-.is-primary .button .title, .is-primary .button .subtitle, .is-primary .button a, .is-primary .button strong, .is-primary .button p, .is-primary .button span {
+.is-primary .button .title, .is-primary .button .subtitle, .is-primary .button a, .is-primary .button strong, .is-primary .button p, .is-primary .button span, .is-primary header .title, .is-primary header .subtitle, .is-primary header a, .is-primary header strong, .is-primary header p, .is-primary header span, .is-primary footer .title, .is-primary footer .subtitle, .is-primary footer a, .is-primary footer strong, .is-primary footer p, .is-primary footer span {
   color: white;
 }
 
@@ -12639,11 +12639,11 @@ header, footer {
   color: white;
 }
 
-.is-info .hero-body .box .title, .is-info .hero-body .box .subtitle, .is-info .hero-body .box a, .is-info .hero-body .box strong, .is-info .hero-body .box p, .is-info header .title, .is-info header .subtitle, .is-info header a, .is-info header strong, .is-info header p, .is-info footer .title, .is-info footer .subtitle, .is-info footer a, .is-info footer strong, .is-info footer p {
+.is-info .hero-body .box .title, .is-info .hero-body .box .subtitle, .is-info .hero-body .box a, .is-info .hero-body .box strong, .is-info .hero-body .box p {
   color: #3273dc;
 }
 
-.is-info .button .title, .is-info .button .subtitle, .is-info .button a, .is-info .button strong, .is-info .button p, .is-info .button span {
+.is-info .button .title, .is-info .button .subtitle, .is-info .button a, .is-info .button strong, .is-info .button p, .is-info .button span, .is-info header .title, .is-info header .subtitle, .is-info header a, .is-info header strong, .is-info header p, .is-info header span, .is-info footer .title, .is-info footer .subtitle, .is-info footer a, .is-info footer strong, .is-info footer p, .is-info footer span {
   color: white;
 }
 
@@ -12651,11 +12651,11 @@ header, footer {
   color: white;
 }
 
-.is-success .hero-body .box .title, .is-success .hero-body .box .subtitle, .is-success .hero-body .box a, .is-success .hero-body .box strong, .is-success .hero-body .box p, .is-success header .title, .is-success header .subtitle, .is-success header a, .is-success header strong, .is-success header p, .is-success footer .title, .is-success footer .subtitle, .is-success footer a, .is-success footer strong, .is-success footer p {
+.is-success .hero-body .box .title, .is-success .hero-body .box .subtitle, .is-success .hero-body .box a, .is-success .hero-body .box strong, .is-success .hero-body .box p {
   color: #23d160;
 }
 
-.is-success .button .title, .is-success .button .subtitle, .is-success .button a, .is-success .button strong, .is-success .button p, .is-success .button span {
+.is-success .button .title, .is-success .button .subtitle, .is-success .button a, .is-success .button strong, .is-success .button p, .is-success .button span, .is-success header .title, .is-success header .subtitle, .is-success header a, .is-success header strong, .is-success header p, .is-success header span, .is-success footer .title, .is-success footer .subtitle, .is-success footer a, .is-success footer strong, .is-success footer p, .is-success footer span {
   color: white;
 }
 
@@ -12663,11 +12663,11 @@ header, footer {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.is-warning .hero-body .box .title, .is-warning .hero-body .box .subtitle, .is-warning .hero-body .box a, .is-warning .hero-body .box strong, .is-warning .hero-body .box p, .is-warning header .title, .is-warning header .subtitle, .is-warning header a, .is-warning header strong, .is-warning header p, .is-warning footer .title, .is-warning footer .subtitle, .is-warning footer a, .is-warning footer strong, .is-warning footer p {
+.is-warning .hero-body .box .title, .is-warning .hero-body .box .subtitle, .is-warning .hero-body .box a, .is-warning .hero-body .box strong, .is-warning .hero-body .box p {
   color: #ffdd57;
 }
 
-.is-warning .button .title, .is-warning .button .subtitle, .is-warning .button a, .is-warning .button strong, .is-warning .button p, .is-warning .button span {
+.is-warning .button .title, .is-warning .button .subtitle, .is-warning .button a, .is-warning .button strong, .is-warning .button p, .is-warning .button span, .is-warning header .title, .is-warning header .subtitle, .is-warning header a, .is-warning header strong, .is-warning header p, .is-warning header span, .is-warning footer .title, .is-warning footer .subtitle, .is-warning footer a, .is-warning footer strong, .is-warning footer p, .is-warning footer span {
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -12675,11 +12675,11 @@ header, footer {
   color: white;
 }
 
-.is-danger .hero-body .box .title, .is-danger .hero-body .box .subtitle, .is-danger .hero-body .box a, .is-danger .hero-body .box strong, .is-danger .hero-body .box p, .is-danger header .title, .is-danger header .subtitle, .is-danger header a, .is-danger header strong, .is-danger header p, .is-danger footer .title, .is-danger footer .subtitle, .is-danger footer a, .is-danger footer strong, .is-danger footer p {
+.is-danger .hero-body .box .title, .is-danger .hero-body .box .subtitle, .is-danger .hero-body .box a, .is-danger .hero-body .box strong, .is-danger .hero-body .box p {
   color: #ff3860;
 }
 
-.is-danger .button .title, .is-danger .button .subtitle, .is-danger .button a, .is-danger .button strong, .is-danger .button p, .is-danger .button span {
+.is-danger .button .title, .is-danger .button .subtitle, .is-danger .button a, .is-danger .button strong, .is-danger .button p, .is-danger .button span, .is-danger header .title, .is-danger header .subtitle, .is-danger header a, .is-danger header strong, .is-danger header p, .is-danger header span, .is-danger footer .title, .is-danger footer .subtitle, .is-danger footer a, .is-danger footer strong, .is-danger footer p, .is-danger footer span {
   color: white;
 }
 
@@ -12770,6 +12770,7 @@ header, footer {
 .event-list-item.is-search .buy-button, .performer-list-item.is-search .buy-button {
   background: #00d5ff;
   color: #000924;
+  border: none;
 }
 
 .event-list-item.is-search .event-date, .performer-list-item.is-search .event-date {
@@ -12787,6 +12788,7 @@ header, footer {
 .event-list-item.is-music .buy-button, .performer-list-item.is-music .buy-button {
   background: #ff470f;
   color: white;
+  border: none;
 }
 
 .event-list-item.is-music .event-date, .performer-list-item.is-music .event-date {
@@ -12804,6 +12806,7 @@ header, footer {
 .event-list-item.is-sport .buy-button, .performer-list-item.is-sport .buy-button {
   background: #000924;
   color: white;
+  border: none;
 }
 
 .event-list-item.is-sport .event-date, .performer-list-item.is-sport .event-date {
@@ -12821,6 +12824,7 @@ header, footer {
 .event-list-item.is-theater .buy-button, .performer-list-item.is-theater .buy-button {
   background: #ff2e8c;
   color: white;
+  border: none;
 }
 
 .event-list-item.is-theater .event-date, .performer-list-item.is-theater .event-date {
@@ -12932,6 +12936,11 @@ input.input {
 .performer-list-item {
   font-family: "Open-Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   border-radius: 20px;
+  padding: 0.8em 0;
+}
+
+.performer-list-item:hover {
+  box-shadow: 0 0 8px 0px #dbdbdb;
 }
 
 .event-list-item {
@@ -12947,18 +12956,34 @@ input.input {
   border-radius: 20px;
   overflow: hidden;
   margin: 0 0 0.5em 0;
-  padding: 0.5em 1em 0.5em 7em;
+  padding: 1em 1em 1em 10em;
   background: -webkit-linear-gradient(white, whitesmoke);
   background: linear-gradient(white, whitesmoke);
+  cursor: pointer;
+}
+
+.event-list-item:hover {
+  box-shadow: 0 0 8px 0px #dbdbdb;
 }
 
 .event-list-item span {
   line-height: 0.9em;
 }
 
+.event-name {
+  display: -webkit-box;
+  display: flex;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
 .event-name span {
   font-family: "Open-Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  font-size: 1.8em;
+  font-size: 2.4em;
+  line-height: 0.9em;
 }
 
 .event-location span {
@@ -12974,12 +12999,17 @@ input.input {
   flex-flow: column nowrap;
   -webkit-box-pack: center;
   justify-content: center;
-  height: 100%;
+  height: 110%;
+  width: 6em;
   left: 0;
-  top: 0;
+  top: -5%;
   padding: 0 1em;
   margin: 0;
   font-size: 1.5em;
+}
+
+.event-date span {
+  text-align: center;
 }
 
 .event-date span.day {
@@ -12990,6 +13020,19 @@ input.input {
 .event-button button.button {
   font-family: "Shrikhand", "Georgia", serif;
   font-size: 1.5em;
+}
+
+.profile-photo {
+  display: inline-block;
+  overflow: hidden;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.profile-photo.is-small {
+  height: 30px;
+  width: 30px;
+  margin: 0 0.5em 0 0;
 }
 
 section.header {
@@ -13027,8 +13070,7 @@ nav.nav.reduce {
 
 .main-menu-dropdown {
   position: fixed;
-  display: -webkit-box;
-  display: flex;
+  display: none;
   left: 5%;
   margin: 0 auto;
   width: 90%;
@@ -13087,6 +13129,11 @@ section.footer {
   background: #121212;
   padding-top: 250px;
   padding-bottom: 250px;
+}
+
+.animated {
+  -webkit-animation-duration: 100ms;
+  animation-duration: 100ms;
 }
 
 .animated.animatedSlide {

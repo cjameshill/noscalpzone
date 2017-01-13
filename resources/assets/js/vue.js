@@ -1,8 +1,16 @@
-import Flash from './_flash';
+Vue.component('CenterHeader', require('./components/CenterHeader.vue'));
 
-window.flash = new Flash();
 
-window.vm = new Vue({
-    el: '',
+new Vue({
+    el: '#app',
+
+    components: [
+        'CenterHeader'
+    ],
+
+    created(){
+        console.log('vue loaded');
+    }
+
 
 });

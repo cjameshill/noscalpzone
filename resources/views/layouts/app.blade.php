@@ -22,7 +22,7 @@
 <body>
 
 <div id="app">
-    @include('partials._notifications')
+{{--    @include('partials._notifications')--}}
 
     @yield('container')
 
