@@ -7,6 +7,8 @@ $black:        hsl(0, 0%, 4%) !default
 $black-bis:    hsl(0, 0%, 7%) !default
 $black-ter:    hsl(0, 0%, 14%) !default
 
+$navy-dark: hsl(225, 100%, 7%) !default
+
 $grey-darker:  hsl(0, 0%, 21%) !default
 $grey-dark:    hsl(0, 0%, 29%) !default
 $grey:         hsl(0, 0%, 48%) !default
@@ -20,10 +22,11 @@ $white:        hsl(0, 0%, 100%) !default
 $orange:       hsl(14,  100%, 53%) !default
 $yellow:       hsl(48,  100%, 67%) !default
 $green:        hsl(141, 71%,  48%) !default
-$turquoise:    hsl(171, 100%, 41%) !default
+$turquoise: hsl(190, 100%, 50%) !default
 $blue:         hsl(217, 71%,  53%) !default
 $purple:       hsl(271, 100%, 71%) !default
 $red:          hsl(348, 100%, 61%) !default
+$pink: hsl(333, 100%, 59%) !default
 
 // Typography
 $family-sans-serif: "Open-Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
@@ -46,7 +49,7 @@ $weight-title-bold: 500 !default
 
 // Miscellaneous
 $easing: ease-out !default
-$radius-small: 2px !default
+$radius-small: 10px !default
 $radius: 25px !default
 $radius-large: 20px !default
 $speed: 86ms !default
@@ -67,6 +70,13 @@ $dark: $grey-darker !default
 
 $transparent-black: hsla(0, 0%, 4%, 0.85);
 $transparent-cover: hsla(0, 0%, 4%, 0.35);
+
+$music: $orange;
+$sport: $navy-dark;
+$theater: $pink;
+$search: $turquoise;
+
+$white-grey-gradient: linear-gradient($white, $white-ter);
 
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
@@ -93,6 +103,8 @@ $border-hover: $grey-light !default
 
 $footer-background: $black-bis;
 
+$box-shadow: 1px 1px 30px 4px $black-bis;
+
 // Text colors
 $text: $grey-dark !default
 $text-invert: findColorInvert($text) !default
@@ -111,11 +123,11 @@ $link: $primary !default
 $link-invert: $primary-invert !default
 $link-visited: $purple !default
 
-$link-hover: $grey-darker !default
+$link-hover: $grey-light !default
 $link-hover-background: $white-ter !default
 $link-hover-border: $grey !default
 
-$link-hover-darken: 20%;
+$link-hover-darken: 10%;
 
 $link-active: $grey-darker !default
 $link-active-border: $grey-darker !default
@@ -134,7 +146,9 @@ $size-huge: $size-1 !default
 ////////////////////////////////////////////////
 // 4. Lists and maps
 
-$colors: (background: ($black, $white), white: ($white, $black), black: ($black, $white), light: ($light, $light-invert), dark: ($dark, $dark-invert), primary: ($primary, $primary-invert), info: ($info, $info-invert), success: ($success, $success-invert), warning: ($warning, $warning-invert), danger: ($danger, $danger-invert)) !default
+$colors: (background: ($black, $white, $grey), white: ($white, $black, $grey), black: ($black, $white), light: ($light, $light-invert, $grey), dark: ($dark, $dark-invert, $grey), primary: ($primary, $primary-invert, $grey), info: ($info, $info-invert, $grey), success: ($success, $success-invert, $grey), warning: ($warning, $warning-invert, $grey), danger: ($danger, $danger-invert, $grey)) !default
+
+$theme-colors: (search: ($search, $sport, $grey), music: ($music, $white, $grey), sport: ($sport, $white, $grey), theater: ($theater, $white, $grey));
 
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default
 

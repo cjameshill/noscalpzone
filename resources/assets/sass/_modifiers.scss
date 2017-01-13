@@ -39,6 +39,10 @@ header, footer {
   width: 100vw;
 }
 
+.is-fullheight {
+  height: 100%;
+}
+
 .has-no-margin {
   margin: 0;
 }
@@ -49,24 +53,78 @@ header, footer {
 
 /// is-background COLOR
 
-.hero, nav.nav, .box, section.footer {
-  @each $name, $pair in $colors {
-    $color: nth($pair, 1);
-    $color-invert: nth($pair, 2);
-    &.is-#{$name}{
+
+@each $name, $pair in $colors {
+  $color: nth($pair, 1);
+  $color-invert: nth($pair, 2);
+  .is-#{$name}{
+    .title, .subtitle, a, strong, p, span {
+      color: $color-invert;
+    }
+    .hero-body .box, header, footer {
+      .title, .subtitle, a, strong, p {
+        color: $color;
+      }
+    }
+    .button {
       .title, .subtitle, a, strong, p, span {
         color: $color-invert;
       }
-      .nav-item {
-        .title, .subtitle, a, strong, p, span {
+    }
+  }
+}
+
+.has-dropdown {
+  @each $name, $item in $theme-colors {
+    $color: nth($item, 1);
+    $color-invert: nth($item, 2);
+    $color-alt: nth($item, 3);
+
+    &.is-#{$name} {
+      .title, .subtitle, p {
+        color: $color-alt;
+      }
+      .box {
+        border: 5px solid $color;
+      }
+      .column {
+        .title, .subtitle, p {
+          color: $color-alt;
+        }
+      }
+      header {
+        background: $color;
+        .title, .subtitle, p {
           color: $color-invert;
         }
       }
-      .hero-body .box {
-        .title, .subtitle, a, strong, p {
+    }
+  }
+}
+
+.event-list-item, .performer-list-item {
+  @each $name, $item in $theme-colors {
+    $color: nth($item, 1);
+    $color-invert: nth($item, 2);
+    $color-alt: nth($item, 3);
+
+    &.is-#{$name} {
+      border: 1px solid $color;
+
+      .buy-button {
+        background: $color;
+        color: $color-invert;
+      }
+
+      .event-date {
+        background: $color;
+      }
+      .event-name {
+        span {
           color: $color;
         }
       }
+
     }
   }
 }
@@ -90,4 +148,8 @@ header, footer {
 
 .has-transition {
   transition: all 0.2s ease-in;
+}
+
+.has-dropdown {
+  position: relative;
 }

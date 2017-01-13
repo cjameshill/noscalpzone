@@ -14,9 +14,6 @@ nav.nav {
     background: $transparent-black;
     padding: 0;
 
-    input.search-main-menu, a.button.is-medium {
-      font-size: 16px;
-    }
   }
 }
 
@@ -27,6 +24,59 @@ nav.nav {
     display: block;
   }
 }
+
+
+/// MAIN MENU DROPDOWN
+
+.has-dropdown {
+  margin: 0 0.3em;
+
+  &:hover {
+    > .main-menu-dropdown {
+      display: flex;
+    }
+  }
+}
+
+.main-menu-dropdown {
+  position: fixed;
+  display: flex;
+  left: 5%;
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  background: none;
+  padding-top: 20px;
+
+
+  .columns {
+    padding: 1em;
+  }
+
+  .box {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 400px;
+    background: $white-grey-gradient;
+    border-radius: $radius-small;
+    box-shadow: $box-shadow;
+  }
+
+
+  header, footer {
+    display: flex;
+    justify-content: center;
+    .title, .subtitle {
+      font-family: $family-sans-serif;
+    }
+  }
+}
+
+
 
 
 //// NOTIFICATIONS

@@ -5,7 +5,12 @@
 .button {
   background: none;
   font-family: $family-serif;
+
+  &.is-secondary {
+    border: none;
+  }
 }
+
 
 
 /// BOX FEATURED TICKETS
@@ -61,3 +66,71 @@ input.input {
 .hero.hero-primary {
   padding-top: 3em;
 }
+
+
+///// EVENT ITEM
+
+.performer-list-item {
+  font-family: $family-sans-serif;
+  border-radius: $radius-large;
+}
+
+.event-list-item {
+  font-family: $family-sans-serif;
+  display: flex;
+  position: relative;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: $radius-large;
+  overflow: hidden;
+  margin: 0 0 0.5em 0;
+  padding: 0.5em 1em 0.5em 7em;
+  background: $white-grey-gradient;
+
+  span {
+    line-height: 0.9em;
+  }
+}
+
+.event-name {
+  span {
+    font-family: $family-sans-serif;
+    font-size: 1.8em;
+  }
+}
+
+.event-location {
+  span {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: $grey;
+  }
+}
+
+.event-date {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0 1em;
+  margin: 0;
+  font-size: 1.5em;
+
+  span.day {
+    font-size: 2em;
+    font-weight: 800;
+  }
+
+}
+
+.event-button {
+  button.button {
+    font-family: $family-serif;
+    font-size: 1.5em;
+  }
+}
+
