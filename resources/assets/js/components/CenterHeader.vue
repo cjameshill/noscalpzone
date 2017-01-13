@@ -7,14 +7,14 @@
                    <a href="" class="button is-secondary is-medium">{{ item.menu.title }}</a>
 
 
-                   <div class="main-menu-dropdown animated slideInUp">
+                   <div class="main-menu-dropdown">
                        <div class="box">
 
                            <header>
                                <h1 class="title is-3">{{ item.menu.title }}</h1>
                            </header>
 
-                           <div class="columns is-fullheight is-multiline">
+                           <div class="columns is-full is-multiline">
                                <div class="column is-6-desktop is-12-tablet">
                                    <h1 class="title is-4">Events</h1>
 
