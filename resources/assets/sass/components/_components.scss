@@ -44,7 +44,7 @@ nav.nav {
   left: 5%;
   margin: 0 auto;
   width: 90%;
-  height: auto;
+  min-height: 450px;
   background: none;
   padding-top: 20px;
 
@@ -55,13 +55,12 @@ nav.nav {
 
   .box {
     display: flex;
-    position: relative;
-    padding: 0;
+    padding: 0 0 3em 0;
     margin: 0;
     flex-flow: column nowrap;
     justify-content: flex-start;
     width: 100%;
-    min-height: 400px;
+    height: auto;
     background: $white-grey-gradient;
     border-radius: $radius-small;
     box-shadow: $box-shadow;

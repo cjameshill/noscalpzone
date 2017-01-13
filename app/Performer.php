@@ -6,10 +6,11 @@ use App\Traits\ModelScopes;
 use App\Traits\WithProfiles;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 class Performer extends Model
 {
-    use SoftDeletes, WithProfiles, ModelScopes;
+    use SoftDeletes, WithProfiles, ModelScopes, Searchable;
 
     protected $table = 'performers';
 

@@ -5,11 +5,12 @@ namespace App;
 use App\Traits\ModelScopes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 class Event extends Model
 {
 
-    use SoftDeletes, ModelScopes;
+    use SoftDeletes, ModelScopes, Searchable;
 
     protected $table = 'events';
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="event-list-item" :class="type">
+    <div class="event-list-item" @click="goToPage(event.slug)" :class="type">
         <div class="event-date">
             <span class="date">{{ month }} {{ date }}</span>
             <span class="day">{{ day }}</span>
@@ -27,6 +27,12 @@
             'event',
             'type'
         ],
+
+        methods: {
+            goToPage: (slug) => {
+                return window.location.href = "/events/" + slug;
+            }
+        },
 
         computed: {
             day: function () {

@@ -44,9 +44,14 @@
 
 
 input.input {
-  font-size: 2.2em;
-  font-family: $family-serif;
+  font-size: 2.5em;
+  font-family: $family-sans-serif;
   padding: 1.4em 1.5em;
+  color: $dark;
+}
+
+input, textarea {
+  user-select: text;
 }
 
 
@@ -74,6 +79,8 @@ input.input {
   font-family: $family-sans-serif;
   border-radius: $radius-large;
   padding: 0.8em 0;
+  margin: 0.3em;
+  background: $white;
 
   &:hover {
     box-shadow: $box-shadow-light;
@@ -91,7 +98,7 @@ input.input {
   overflow: hidden;
   margin: 0 0 0.5em 0;
   padding: 1em 1em 1em 10em;
-  background: $white-grey-gradient;
+  background: $white;
   cursor: pointer;
 
   &:hover {

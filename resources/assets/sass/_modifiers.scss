@@ -4,6 +4,36 @@
   font-family: $family-serif;
 }
 
+span, p {
+  font-family: $family-sans-serif;
+
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+    &.is-#{$i}{
+      font-size: $size;
+    }
+  }
+}
+
+.is-sans-serif {
+  font-family: $family-sans-serif;
+
+  &.subtitle, &.title {
+    font-weight: 400;
+  }
+}
+
+.title.is-highlighted, .subtitle.is-highlighted {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+span.is-highlighted {
+  background: $orange;
+  padding: 0.3em;
+  margin: 1em 0;
+}
+
 .center-column, .center {
   display: flex;
   flex-flow: column;

@@ -2,6 +2,7 @@
     <nav class="nav is-background has-transition">
         <div class="nav-left">
             <div class="nav-item">
+                <a href="/" class="button is-secondary is-medium">#NoScalpZone</a>
             </div>
         </div>
 

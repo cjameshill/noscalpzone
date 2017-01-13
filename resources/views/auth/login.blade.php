@@ -19,7 +19,7 @@
                                 <input type="text" name="email" class="input" placeholder="Your email address" value="{{ old('email') }}"/>
                             </p>
                             <p class="control">
-                                <input type="password" name="password" class="input" placeholder="Your password" value="{{ old('password') }}"/>
+                                <input type="password" name="password" class="input" placeholder="Your password" />
                             </p>
                             <p class="control">
                                 <button class="button is-large is-primary">Login</button>

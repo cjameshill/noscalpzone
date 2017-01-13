@@ -5,6 +5,7 @@ namespace App;
 use App\Tickets\TicketDistribution;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 
 class Ticket extends Model
 {

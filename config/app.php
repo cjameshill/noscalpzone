@@ -162,19 +162,23 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        GrahamCampbell\Flysystem\FlysystemServiceProvider::class,
+        Aws\Laravel\AwsServiceProvider::class,
 
         /*
          * Package Service Providers...
          */
 
-        //
+        Laravel\Scout\ScoutServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
+         App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
@@ -225,6 +229,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'Flysystem' => GrahamCampbell\Flysystem\Facades\Flysystem::class,
+        'Scout' => Laravel\Scout\ScoutServiceProvider::class,
+        'Uuid' => Webpatser\Uuid\Uuid::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'AWS' => Aws\Laravel\AwsFacade::class,
 
     ],
 

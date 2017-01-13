@@ -10,7 +10,10 @@ Route::get('/', 'PagesController@home');
 ///// EVENTS /////
 
 Route::group(['prefix' => 'events', 'name' => 'events'], function (){
-    //
+
+    Route::get('/{event}', 'EventsController@show');
+    Route::get('/', 'EventsController@index');
+
 });
 
 
