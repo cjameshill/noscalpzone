@@ -2,7 +2,7 @@
     <div class="container">
         <div class="columns">
             <div class="column is-6">
-                <img src="http://placehold.it/450x450" alt="">
+                <img src="https://placehold.it/450x450" alt="">
             </div>
 
             <div class="column is-6">
