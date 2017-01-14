@@ -48,8 +48,7 @@ class EventsController extends Controller
      */
     public function show(Event $event){
 
-        $e = $event->with('tags', 'tickets', 'venues')->where('slug', $event->slug)->first();
-
+        $e = $event->with('type', 'tickets', 'tickets.type', 'venues', 'tickets.seats')->where('slug', $event->slug)->first();
 
         return view('pages.events.show', compact('e'));
     }

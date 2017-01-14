@@ -11,14 +11,20 @@
                 </h1>
 
                 <h1 class="subtitle is-2 is-sans-serif is-highlighted">
-                    <span class="is-highlighted">
+                    <span class="is-highlighted is-{{ $e->type->first()->name }}">
                          {{ \Carbon\Carbon::now()->toDayDateTimeString()  }}
                     </span>
                 </h1>
 
                 <h1 class="subtitle is-2 is-sans-serif">
-                    <span class="icon is-large"><i class="fa fa-map-marker"></i></span>
-                    @if($e->venues->first()){{ $e->venues->first()->title }}@else TBD @endif
+                    @if($e->venues)
+                        @foreach($e->venues as $venue)
+                            <span class="icon is-large"><i class="fa fa-map-marker"></i></span>
+                            {{ $venue->title }}
+                        @endforeach
+                    @else
+                        TBD
+                    @endif
                 </h1>
             </div>
         </div>
@@ -26,7 +32,7 @@
     
     <section class="section">
 
-            <event-tickets></event-tickets>
+            <event-tickets :event="{{ $e }}"></event-tickets>
 
     </section>
     

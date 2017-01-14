@@ -16,6 +16,22 @@
   animation-duration: .5s;
 }
 
+.bounce-up-enter-active {
+  animation: bounceInUp .3s;
+}
+.bounce-up-leave-active {
+  animation: bounceOutDown .3s;
+}
+
+
+.fade-enter-active {
+  animation: fadeIn .3s;
+}
+.fade-leave-active {
+  animation: fadeOut .3s;
+}
+
+
 .bounce-enter-active {
   animation: bounceInDown .3s;
 }

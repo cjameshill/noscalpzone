@@ -69,68 +69,98 @@ input, textarea {
 ///// HERO
 
 .hero.hero-primary {
-  padding-top: 3em;
+  padding-top: 9em;
 }
 
 
-///// EVENT ITEM
+///// LIST ITEMS
 
-.performer-list-item {
-  font-family: $family-sans-serif;
-  border-radius: $radius-large;
-  padding: 0.8em 0;
-  margin: 0.3em;
-  background: $white;
-
-  &:hover {
-    box-shadow: $box-shadow-light;
-  }
-}
-
-.event-list-item {
+.ticket-list-item, .event-list-item, .performer-list-item {
   font-family: $family-sans-serif;
   display: flex;
   position: relative;
-  flex-flow: row nowrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
   border-radius: $radius-large;
   overflow: hidden;
-  margin: 0 0 0.5em 0;
-  padding: 1em 1em 1em 10em;
   background: $white;
   cursor: pointer;
+
+  @include mappy-bp(med){
+    flex-flow: row nowrap;
+  }
 
   &:hover {
     box-shadow: $box-shadow-light;
   }
 
+  > div:not(.list-item-date) {
+    text-align: center;
+    margin: 0.6em;
+  }
+
   span {
     line-height: 0.9em;
+    text-align: center;
   }
 }
 
-.event-name {
+.performer-list-item {
+  padding: 0.8em 0;
+  margin: 0.3em;
+
+}
+
+.ticket-list-item {
+  margin: 0 0 0.5em 0;
+  padding: 1em;
+}
+
+.event-list-item {
+  margin: 0 0 0.5em 0;
+  padding: 1em 1em 1em 10em;
+
+}
+
+.list-item-name {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   span {
     font-family: $family-sans-serif;
-    font-size: 2.4em;
+    font-size: 2.6em;
     line-height: 0.9em;
   }
 }
 
-.event-location {
+.list-item-seats {
   span {
+    font-size: 1.8em;
+    padding-right: 0.4em;
+    padding-left: 0.3em;
+    border-right: 1px solid $grey-light;
+    color: $grey;
+    font-style: italic;
+    line-height: 1.8em;
+    strong {
+      font-size: 1.4em;
+    }
+  }
+}
+
+.list-item-location {
+  span {
+    padding-right: 0.4em;
+    padding-left: 0.3em;
     font-size: 1.5em;
     font-weight: 800;
     color: $grey;
   }
 }
 
-.event-date {
+.list-item-date {
   position: absolute;
   display: flex;
   flex-flow: column nowrap;
@@ -152,10 +182,9 @@ input, textarea {
     font-weight: 800;
   }
 
-
 }
 
-.event-button {
+.list-item-button {
   button.button {
     font-family: $family-serif;
     font-size: 1.5em;

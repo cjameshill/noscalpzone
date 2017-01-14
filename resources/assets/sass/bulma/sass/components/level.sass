@@ -36,6 +36,7 @@
   +block
   align-items: center
   justify-content: space-between
+
   code
     border-radius: $radius
   img
@@ -49,9 +50,7 @@
         margin-bottom: 0
       &:not(.is-narrow)
         flex-grow: 1
-  // Responsiveness
-  +tablet
-    display: flex
-    & > .level-item
-      &:not(.is-narrow)
-        flex-grow: 1
+  display: flex
+  & > .level-item
+    &:not(.is-narrow)
+      flex-grow: 1

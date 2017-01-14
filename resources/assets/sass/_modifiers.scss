@@ -1,5 +1,10 @@
 //// MODIFIERS
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .title, .subtitle {
   font-family: $family-serif;
 }
@@ -29,9 +34,16 @@ span, p {
 }
 
 span.is-highlighted {
-  background: $orange;
   padding: 0.3em;
   margin: 1em 0;
+  font-weight: 400;
+
+  @each $name, $item in $theme-colors {
+    $color: nth($item, 1);
+    &.is-#{$name} {
+      background: $color;
+    }
+  }
 }
 
 .center-column, .center {
@@ -132,7 +144,7 @@ header, footer {
   }
 }
 
-.event-list-item, .performer-list-item {
+.event-list-item, .performer-list-item, .ticket-list-item {
   @each $name, $item in $theme-colors {
     $color: nth($item, 1);
     $color-invert: nth($item, 2);
@@ -147,10 +159,10 @@ header, footer {
         border: none;
       }
 
-      .event-date {
+      .list-item-date {
         background: $color;
       }
-      .event-name {
+      .list-item-name {
         span {
           color: $color;
         }
@@ -178,9 +190,38 @@ header, footer {
 }
 
 .has-transition {
-  transition: all 0.2s ease-in;
+  transition: all 0.2s $ease-cubic;
+}
+
+.has-drop-shadow {
+  box-shadow: $box-shadow-light;
 }
 
 .has-dropdown {
   position: relative;
+}
+
+.is-active > .ticket-list-item {
+  border: 5px solid $orange;
+}
+
+.level {
+  width: 100%;
+}
+
+//// RESPONSIVE
+
+.hide-on-mobile {
+  display: none;
+  
+  @include mappy-bp(med) {
+    display: block;
+  }
+}
+
+//// IMAGES
+
+img {
+  width: 100%;
+  height: auto;
 }

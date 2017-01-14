@@ -7,7 +7,7 @@
                    <a href="" class="button is-secondary is-medium">{{ item.menu.title }}</a>
 
 
-                   <div class="main-menu-dropdown animated slideInDown">
+                   <div class="main-menu-dropdown animated slideInUp">
                        <div class="box">
 
                            <header>
@@ -27,7 +27,7 @@
                                    <div class="columns is-multiline">
 
                                        <div v-for="performer in item.data.performers" class="column is-12 performer-list-item" :class="item.menu.type">
-                                           <div class="event-name">
+                                           <div class="list-item-name">
                                                 <div class="profile-photo is-small" style="background-image: url('https://s3.us-east-2.amazonaws.com/noscalpzone-assets/storage/images/msg.jpg');"></div>
                                                 <span>{{ performer.title }}</span>
                                            </div>
@@ -57,18 +57,19 @@
 
         data() {
             return {
+                loading: true,
                 menu: {
                     music: {
                         data: [],
-                        menu: { title: 'Music', type: 'is-music', tag: 'music'}
+                        menu: { title: 'Music', type: 'is-music'}
                     },
                     sport: {
                         data: [],
-                        menu: { title: 'Sport', type: 'is-sport', tag: 'sport'}
+                        menu: { title: 'Sport', type: 'is-sport'}
                     },
                     theater: {
                         data: [],
-                        menu: { title: 'Theater', type: 'is-theater', tag: 'theater'}
+                        menu: { title: 'Theater', type: 'is-theater'}
                     }
                 },
 

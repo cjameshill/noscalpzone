@@ -54,6 +54,8 @@ $radius: 25px !default
 $radius-large: 20px !default
 $speed: 86ms !default
 
+$ease-cubic: cubic-bezier(0.990, 0.000, 0.000, 1.000);
+
 ////////////////////////////////////////////////
 ////////////////////////////////////////////////
 // 2. Primary colors
@@ -155,7 +157,7 @@ $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default
 
 // Z-Index
 
-$elements: wrapper, header;
+$elements: wrapper, header, cover;
 
 // Breakpoints
 

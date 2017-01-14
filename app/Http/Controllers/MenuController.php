@@ -27,11 +27,11 @@ class MenuController extends Controller
 
     }
 
-    public function eventsAndPerformers($tag) {
+    public function eventsAndPerformers($type) {
 
-        $events = $this->event->hasTag($tag)->orderBy('event_start_date')->take(3)->get();
+        $events = $this->event->hasType($type)->orderBy('event_start_date')->take(3)->get();
 
-        $performers = $this->performer->hasTag($tag)->orderBy('title')->take(6)->get(); // Get some sort of Redis hash for most viewed performers
+        $performers = $this->performer->hasType($type)->orderBy('title')->take(6)->get(); // Get some sort of Redis hash for most viewed performers
 
         return ['events' => $events, 'performers' => $performers];
     }

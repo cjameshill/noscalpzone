@@ -6,9 +6,9 @@ namespace App\Traits;
 trait ModelScopes
 {
 
-    public function hasTag($tag) {
-        return $this->whereHas('tags', function ($q) use ($tag){
-            $q->where('name', $tag);
+    public function hasType($type) {
+        return $this->whereHas('type', function ($q) use ($type){
+            $q->where('name', $type);
         });
     }
 

@@ -2,6 +2,7 @@
 
 @section('container')
 
+
     @include('components._primary-header')
 
     <div class="wrapper">
@@ -10,5 +11,7 @@
         @include('components._primary-footer')
 
     </div>
+
+    <ticket-checkout></ticket-checkout>
 
 @endsection

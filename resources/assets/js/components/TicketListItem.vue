@@ -1,21 +1,15 @@
 <template>
-    <div class="event-list-item" :class="type">
-        <div class="event-date">
-            <span class="date">Jan 13</span>
-            <span class="day">Fri</span>
-        </div>
-        <div class="event-name">
-            <div class="profile-photo is-small" style="background-image: url('https://s3.us-east-2.amazonaws.com/noscalpzone-assets/storage/images/msg.jpg');"></div>
+    <div class="ticket-list-item" :class="type">
 
-            <span>Coldplay</span>
+        <div v-show="ticket.seats[0]" class="list-item-seats">
+            <span>Qty. <strong>{{ ticket.quantity }}</strong></span>
+            <span>Section <strong v-for="seat in ticket.seats">{{ seat.section }}</strong></span>
+            <span>Row <strong v-for="seat in ticket.seats">{{ seat.row }}</strong></span>
+            <span>Seats <strong v-for="seat in ticket.seats">{{ seat.number }}</strong></span>
         </div>
-        <div class="event-location">
-            <!--<span class="icon"><i class="fa fa-map-marker"></i></span>-->
-            <span>Madison Square Garden</span>
 
-        </div>
-        <div class="event-button">
-            <button class="button buy-button">Buy for $80</button>
+        <div class="list-item-button">
+            <button class="button buy-button">Buy for {{ ticket.amount }}</button>
         </div>
 
     </div>
@@ -26,12 +20,17 @@
 
     export default {
 
-        data() {
-            return {
-                type: 'is-music'
+        props: [
+            'ticket',
+            'type',
+            'event'
+        ],
+
+        computed: {
+            qty: function () {
+                return this.ticket.seats.length;
             }
         }
-
 
     }
 

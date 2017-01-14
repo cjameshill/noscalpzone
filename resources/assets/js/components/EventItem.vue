@@ -1,20 +1,20 @@
 <template>
     <div class="event-list-item" @click="goToPage(event.slug)" :class="type">
-        <div class="event-date">
+        <div class="list-item-date">
             <span class="date">{{ month }} {{ date }}</span>
             <span class="day">{{ day }}</span>
         </div>
-        <div class="event-name">
+        <div class="list-item-name">
             <div class="profile-photo is-small" style="background-image: url('https://s3.us-east-2.amazonaws.com/noscalpzone-assets/storage/images/msg.jpg');"></div>
 
             <span>{{ event.title }}</span>
         </div>
-        <div class="event-location">
+        <div class="list-item-location">
             <!--<span class="icon"><i class="fa fa-map-marker"></i></span>-->
             <span>Madison Square Garden</span>
 
         </div>
-        <div class="event-button">
+        <div class="list-item-button">
             <button class="button buy-button">Go</button>
         </div>
 

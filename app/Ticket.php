@@ -31,6 +31,7 @@ class Ticket extends Model
 
     protected $touches = 'payments';
 
+
     public function seller() {
         return $this->belongsTo('App\Seller');
     }
