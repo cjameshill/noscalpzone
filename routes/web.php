@@ -1,10 +1,6 @@
 <?php
 
 
-Auth::routes();
-
-Route::get('logout', 'Auth\LoginController@logout');
-
 Route::get('/', 'PagesController@home');
 
 ///// EVENTS /////
@@ -39,5 +35,10 @@ Route::group(['prefix' => 'api', 'name' => 'api'], function (){
 
     Route::get('/menu/{tag?}', 'MenuController@eventsAndPerformers');
 });
+
+
+Auth::routes();
+
+Route::get('logout', 'Auth\LoginController@logout');
 
 
