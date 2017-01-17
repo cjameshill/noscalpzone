@@ -6,10 +6,11 @@
             <span>Section <strong v-for="seat in ticket.seats">{{ seat.section }}</strong></span>
             <span>Row <strong v-for="seat in ticket.seats">{{ seat.row }}</strong></span>
             <span>Seats <strong v-for="seat in ticket.seats">{{ seat.number }}</strong></span>
+            <span>Price <strong v-for="seat in ticket.seats">{{ ticket.amount }}</strong></span>
         </div>
 
         <div class="list-item-button">
-            <button class="button buy-button">Buy for {{ ticket.amount }}</button>
+            <button class="button buy-button is-medium">Select</button>
         </div>
 
     </div>

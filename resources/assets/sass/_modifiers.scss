@@ -172,23 +172,6 @@ header, footer {
   }
 }
 
-.hero-body {
-  width: 100%;
-  padding: 150px 1em;
-}
-
-.is-background {
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-
-  .hero-body, .body {
-    height: 100%;
-    background: $transparent-cover;
-  }
-
-}
-
 .has-transition {
   transition: all 0.2s $ease-cubic;
 }
@@ -209,6 +192,45 @@ header, footer {
   width: 100%;
 }
 
+//// HERO
+
+.hero-body {
+  width: 100%;
+  padding: 150px 1em;
+}
+
+.is-background {
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+
+  .hero-body, .body {
+    height: 100%;
+    background: $transparent-cover;
+  }
+
+}
+
+.hero.is-event {
+  position: relative;
+  overflow: visible;
+
+  .hero-body {
+    padding: 60px 1em;
+  }
+
+  .hero-date {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
 //// RESPONSIVE
 
 .hide-on-mobile {
@@ -219,9 +241,27 @@ header, footer {
   }
 }
 
+//// LEVEL
+
+.level {
+  justify-content: center;
+
+  .level-center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    .level-item {
+      padding: 0.3em;
+    }
+  }
+}
+
 //// IMAGES
 
 img {
-  width: 100%;
+  width: 90%;
   height: auto;
+  margin: 0 auto;
 }

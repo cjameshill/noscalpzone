@@ -1,4 +1,4 @@
-<section class="header is-fixed">
+<section class="header">
     <nav class="nav is-background has-transition">
         <div class="nav-left">
             <div class="nav-item">

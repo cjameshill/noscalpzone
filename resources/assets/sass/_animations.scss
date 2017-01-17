@@ -45,7 +45,7 @@
 
 .list-complete-item {
   transition: all 0.3s;
-  //display: inline-block;
+  display: inline-block;
 }
 .list-complete-enter, .list-complete-leave-active {
   opacity: 0;
