@@ -1,7 +1,7 @@
 <?php
 
 
-Route::get('/', 'PagesController@welcome');
+Route::get('/', 'PagesController@home');
 
 ///// EVENTS /////
 
