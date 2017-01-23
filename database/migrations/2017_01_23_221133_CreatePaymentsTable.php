@@ -24,16 +24,16 @@ class CreatePaymentsTable extends Migration
             $table->timestamps();
 
             $table->foreign('seller_id')
-                  ->references('id')
-                  ->on('sellers');
+                ->references('id')
+                ->on('sellers');
 
             $table->foreign('buyer_id')
-                  ->references('id')
-                  ->on('buyers');
+                ->references('id')
+                ->on('buyers');
 
             $table->foreign('ticket_id')
-                  ->references('id')
-                  ->on('tickets');
+                ->references('id')
+                ->on('tickets');
 
         });
     }

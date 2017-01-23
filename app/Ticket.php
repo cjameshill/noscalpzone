@@ -2,25 +2,20 @@
 
 namespace App;
 
-use App\Tickets\TicketDistribution;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Scout\Searchable;
 
 class Ticket extends Model
 {
-
     use SoftDeletes;
 
     protected $table = 'tickets';
 
     protected $fillable = [
         'title',
-        'description'
-    ];
-
-    protected $hidden = [
-        'ticket_key'
+        'section',
+        'row',
+        'seat'
     ];
 
     protected $dates = [
@@ -28,9 +23,6 @@ class Ticket extends Model
         'created_at',
         'updated_at'
     ];
-
-    protected $touches = 'payments';
-
 
     public function seller() {
         return $this->belongsTo('App\Seller');
@@ -40,16 +32,12 @@ class Ticket extends Model
         return $this->belongsTo('App\Payment');
     }
 
-    public function downloads() {
-        return $this->hasMany('App\Download');
+    public function download() {
+        return $this->hasOne('App\Download');
     }
 
     public function events() {
-        return $this->belongsToMany('App\Event');
-    }
-
-    public function seats() {
-        return $this->hasMany('App\Seat');
+        return $this->belongsTo('App\Event');
     }
 
     public function tags() {
@@ -60,8 +48,10 @@ class Ticket extends Model
         return $this->morphToMany('App\Type', 'typeable');
     }
 
-    public function distribute() {
-        return new TicketDistribution($this);
+    public function set() {
+        return $this->belongsTo('App\Set');
     }
+
+
 
 }

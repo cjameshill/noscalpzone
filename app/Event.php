@@ -2,15 +2,13 @@
 
 namespace App;
 
-use App\Traits\ModelScopes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Laravel\Scout\Searchable;
 
 class Event extends Model
 {
 
-    use SoftDeletes, ModelScopes, Searchable;
+    use SoftDeletes;
 
     protected $table = 'events';
 
@@ -32,7 +30,13 @@ class Event extends Model
     }
 
     public function tickets() {
-        return $this->belongsToMany('App\Ticket');
+        return $this->hasMany('App\Ticket');
+    }
+
+    public function setsOfTickets() {
+        return Set::whereHas('tickets', function ($q){
+            return $q->where('event_id', $this->id);
+        })->with('tickets')->get();
     }
 
     public function performers() {
@@ -44,8 +48,8 @@ class Event extends Model
     }
 
     public function social() {
-    return $this->morphMany('App\Social', 'sociable');
-}
+        return $this->morphMany('App\Social', 'sociable');
+    }
 
     public function maps() {
         return $this->morphToMany('App\Map', 'mappable');
@@ -62,6 +66,7 @@ class Event extends Model
     public function profile() {
         return $this->morphMany('App\Profile', 'profileable');
     }
+
 
 
 
