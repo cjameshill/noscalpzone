@@ -2,7 +2,6 @@
 
 @section('container')
 
-
     @include('components._primary-header')
 
     <div class="wrapper">
