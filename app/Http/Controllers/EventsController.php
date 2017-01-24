@@ -9,7 +9,7 @@ class EventsController extends Controller
 {
     public function __construct() {
 
-        $this->middleware('guest');
+        $this->middleware('auth')->except(['index', 'show']);
     }
 
     /**
@@ -48,10 +48,11 @@ class EventsController extends Controller
      */
     public function show(Event $event){
 
-        $e = $event->with('type', 'tickets', 'tickets.type', 'venues', 'tickets.seats', 'venues.social')->where('slug', $event->slug)->first();
+        $e = $event->with('type', 'venues', 'venues.social')->where('slug', $event->slug)->first();
 
+        $sets = $event->setsOfTickets()->with('tickets', 'tickets.type')->get();
 
-        return view('pages.events.show', compact('e'));
+        return view('pages.events.show', compact('e', 'sets'));
     }
 
     /**

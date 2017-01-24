@@ -37,7 +37,7 @@
     
     <section class="section">
 
-            <event-tickets :event="{{ $e }}"></event-tickets>
+            <event-tickets :event="{{ $e }}" :sets="{{ $sets }}"></event-tickets>
 
     </section>
     

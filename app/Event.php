@@ -2,13 +2,14 @@
 
 namespace App;
 
+use App\Traits\ModelScopes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Event extends Model
 {
 
-    use SoftDeletes;
+    use SoftDeletes, ModelScopes;
 
     protected $table = 'events';
 
@@ -36,7 +37,7 @@ class Event extends Model
     public function setsOfTickets() {
         return Set::whereHas('tickets', function ($q){
             return $q->where('event_id', $this->id);
-        })->with('tickets')->get();
+        });
     }
 
     public function performers() {
