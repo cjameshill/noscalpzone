@@ -28,6 +28,8 @@ $purple:       hsl(271, 100%, 71%) !default
 $red:          hsl(348, 100%, 61%) !default
 $pink: hsl(333, 100%, 59%) !default
 
+$blue-light: hsl(187, 100%, 83%) !default
+
 // Typography
 $family-sans-serif: "Open-Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
 $family-serif: "Shrikhand", 'Georgia', serif;
@@ -60,7 +62,7 @@ $ease-cubic: cubic-bezier(0.990, 0.000, 0.000, 1.000);
 ////////////////////////////////////////////////
 // 2. Primary colors
 
-$primary: $orange !default
+$primary: $turquoise !default
 
 $info: $blue !default
 $success: $green !default
@@ -71,9 +73,9 @@ $light: $white-ter !default
 $dark: $grey-darker !default
 
 $transparent-black: hsla(0, 0%, 4%, 0.85);
-$transparent-cover: hsla(0, 0%, 4%, 0.35);
+$transparent-cover: hsla(0, 0%, 4%, 0.50);
 
-$music: $orange;
+$music: $purple;
 $sport: $navy-dark;
 $theater: $pink;
 $search: $turquoise;

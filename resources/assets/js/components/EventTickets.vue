@@ -67,11 +67,11 @@
 
                     </transition-group>
 
-                    <div v-show="filteredAndSortedSets = []" class="column is-12">
+                    <div v-show="filteredAndSortedSets = ''" class="column is-12">
                         <h1 class="title is-3">
                             Sorry, there is no tickets at the moment
                         </h1>
-                        <a href="/sell" class="button is-large is-primary">List your ticket now</a>
+                        <a href="/list" class="button is-large is-primary">List your ticket now</a>
                     </div>
                 </div>
             </div>

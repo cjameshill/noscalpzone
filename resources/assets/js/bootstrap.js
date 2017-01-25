@@ -16,17 +16,28 @@ window.$ = window.jQuery = require('jquery');
  * and simple, leaving you to focus on building your next great project.
  */
 
-window.Vue = require('vue');
-window.axios = require('axios');
+import Vue from 'vue';
+import axios from 'axios';
+
+window.Vue = Vue;
+window.axios = axios;
 
 Vue.prototype.$http = axios;
 
-import Validations from 'vuelidate';
+import VueRouter from 'vue-router';
+Vue.use(VueRouter);
 
+
+import Validations from 'vuelidate';
 Vue.use(Validations);
+
 
 window.moment = require('moment');
 
+
+import Dropzone from 'dropzone';
+
+window.dropzone = Dropzone;
 
 
 /**

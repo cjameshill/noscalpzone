@@ -11,11 +11,10 @@ class Ticket extends Model
 
     protected $table = 'tickets';
 
-    protected $fillable = [
-        'title',
-        'section',
-        'row',
-        'seat'
+    protected $guarded = [];
+
+    protected $casts = [
+        'is_ga' => 'boolean',
     ];
 
     protected $dates = [
@@ -25,7 +24,11 @@ class Ticket extends Model
     ];
 
     public function seller() {
-        return $this->belongsTo('App\Seller');
+        return $this->belongsTo('App\User', 'seller_id');
+    }
+
+    public function buyer() {
+        return $this->belongsTo('App\User', 'buyer_id');
     }
 
     public function payment() {

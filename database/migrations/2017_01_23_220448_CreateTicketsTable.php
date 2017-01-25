@@ -22,22 +22,22 @@ class CreateTicketsTable extends Migration
             $table->integer('download_id')->nullable();
             $table->uuid('key')->unique();
             $table->string('title');
-            $table->integer('face_value');
-            $table->integer('amount');
+            $table->integer('face_value')->default(0);
+            $table->integer('amount')->default(0);
             $table->boolean('is_face_value')->default(false);
             $table->boolean('sold')->default(false);
             $table->boolean('live')->default(true);
             $table->boolean('in_cart')->default(false);
             $table->boolean('is_ga')->default(false);
-            $table->string('section');
-            $table->string('row');
-            $table->string('seat');
+            $table->string('section')->nullable();
+            $table->string('row')->nullable();
+            $table->string('seat')->nullable();
             $table->softDeletes();
             $table->timestamps();
 
             $table->foreign('seller_id')
                 ->references('id')
-                ->on('sellers');
+                ->on('users');
 
             $table->foreign('set_id')
                 ->references('id')

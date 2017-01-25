@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Tickets\Sell;
+use App\Traits\BuyerSeller;
 use App\Traits\WithProfiles;
 use Illuminate\Notifications\Notifiable;
 use App\Billing\Billable;
@@ -11,7 +12,7 @@ use Illuminate\Support\Facades\Cache;
 
 class User extends Authenticatable
 {
-    use Notifiable, Billable, WithProfiles;
+    use Notifiable, Billable, WithProfiles, BuyerSeller;
 
     /**
      * The attributes that are mass assignable.
@@ -41,12 +42,12 @@ class User extends Authenticatable
         return $this->hasOne('App\Customer');
     }
 
-    public function buyer() {
-        return $this->hasOne('App\Buyer');
+    public function selling() {
+        return $this->hasMany('App\Ticket', 'seller_id');
     }
 
-    public function seller() {
-        return $this->hasOne('App\Seller');
+    public function buying() {
+        return $this->hasMany('App\Ticket', 'buyer_id');
     }
 
     public function roles() {

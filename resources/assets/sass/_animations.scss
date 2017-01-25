@@ -31,6 +31,13 @@
   animation: fadeOut .3s;
 }
 
+.slide-enter-active {
+  animation: slideInRight .3s;
+}
+.slide-leave-active {
+  animation: slideOutLeft .3s;
+}
+
 
 .bounce-enter-active {
   animation: bounceInDown .3s;

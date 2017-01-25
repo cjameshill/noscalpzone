@@ -46,11 +46,9 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Ticket $ticket){
+    public function show(){
 
-        $t = $ticket->with('type', 'seats', 'events', 'events.venues')->where('id', $ticket->id)->first();
 
-        return view('pages.tickets.show', compact('t'));
     }
 
     /**

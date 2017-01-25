@@ -23,20 +23,48 @@ span, p {
 .is-sans-serif {
   font-family: $family-sans-serif;
 
-  &.subtitle, &.title {
+  &.subtitle, &.title, &.button {
+    font-family: $family-sans-serif;
     font-weight: 400;
+    letter-spacing: -0.07em;
   }
 }
+
 
 .title.is-highlighted, .subtitle.is-highlighted {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
 
+.is-underlined {
+  border-bottom: 3px solid;
+
+  @each $name, $item in $colors {
+    $color: nth($item, 1);
+    &.is-#{$name} {
+      border-color: $color;
+    }
+  }
+
+  @each $name, $item in $theme-colors {
+    $color: nth($item, 1);
+    &.is-#{$name} {
+      border-color: $color;
+    }
+  }
+}
+
 span.is-highlighted {
   padding: 0.3em;
   margin: 1em 0;
   font-weight: 400;
+
+  @each $name, $item in $colors {
+    $color: nth($item, 1);
+    &.is-#{$name} {
+      background: $color;
+    }
+  }
 
   @each $name, $item in $theme-colors {
     $color: nth($item, 1);
