@@ -29,10 +29,41 @@ class SellController extends Controller
 
     }
 
-    public function upload(Request $request, Event $event) {
+    public function upload(Request $request, Event $event, $seat) {
 
         // Create Upload Form Validation
         // Check if Session exists
+
+        $user = auth()->user();
+
+        $file = $request->file('file')->store('tickets', 's3');
+
+        $ticket = $this->createNewTicket($request, $event, $file, $seat);
+
+    }
+
+    public function save(Request $request, Event $event, $seat) {
+
+        // Ticket Validation
+
+        $ticket = $request->session()->get('new-ticket-'.$seat);
+
+        $ticket->update($request->all());
+
+
+    }
+
+    public function resume(Request $request) {
+        if(! $request->session()->exists('new-ticket')){
+            return null;
+        }
+
+        return $request->session()->get('new-ticket');
+    }
+
+    protected function createNewTicket(Request $request, $event, $file, $seat){
+
+        $request->session()->forget('new-ticket-1');
 
         $user = auth()->user();
 
@@ -49,40 +80,13 @@ class SellController extends Controller
         $download = Download::create([
             'ticket_id' => $ticket->id,
             'ticket_key' => $ticket->key,
-            'ticket_uri' => $ticket->key.'.pdf',
+            'ticket_uri' => basename($file),
         ]);
 
         $ticket->download_id = $download->id;
         $ticket->save();
 
-        $request->session()->put('new-ticket', $ticket);
-
-    }
-
-    public function save(Request $request, Event $event) {
-
-        // Ticket Validation
-
-        $ticket = $request->session()->get('new-ticket');
-
-        $t = Ticket::findOrFail($ticket->id);
-
-        $t->update([
-            'section' => $request['section'],
-            'row' => $request['row'],
-            'seat' => $request['seat'],
-            'amount' => $request['amount'],
-        ]);
-
-        return $t;
-    }
-
-    public function resume(Request $request) {
-        if(! $request->session()->exists('new-ticket')){
-            return null;
-        }
-
-        return $request->session()->get('new-ticket');
+        $request->session()->put('new-ticket-'.$seat, $ticket);
     }
 
 }

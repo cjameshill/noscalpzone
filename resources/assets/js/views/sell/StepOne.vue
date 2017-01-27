@@ -5,15 +5,15 @@
                 How many tickets do you need to get rid of?
             </h1>
             <p class="control center-row">
+                <!--<span>-->
+                <!--<button @click="sell.default.quantity -= 1" class="button is-large is-primary" :class="{ 'is-disabled' : sell.default.quantity < 2 }">-</button>-->
+                <!--</span>-->
                 <span>
-                <button @click="quantity -= 1" class="button is-large is-primary" :class="{ 'is-disabled' : quantity < 2 }">-</button>
+                <input v-model="sell.default.quantity" type="number" class="input is-large is-auto-width has-text-centered" maxlength="2" size="3">
                 </span>
-                <span>
-                <input v-model="quantity" type="text" class="input is-large is-auto-width has-text-centered" maxlength="2" size="3">
-                </span>
-                <span>
-                <button @click="quantity += 1" class="button is-large is-primary" :class="{ 'is-disabled' : quantity > 6 }">+</button>
-                </span>
+                <!--<span>-->
+                <!--<button @click="sell.default.quantity += 1" class="button is-large is-primary" :class="{ 'is-disabled' : sell.default.quantity > 6 }">+</button>-->
+                <!--</span>-->
             </p>
         </div>
         <div class="columns">
@@ -36,8 +36,7 @@
 
         data() {
             return {
-                form: sell.default.form,
-                quantity: sell.default.quantity
+                sell
             }
         }
     }

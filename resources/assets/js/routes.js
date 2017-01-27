@@ -10,7 +10,7 @@ let routes = [
         component: require('./views/sell/StepTwo.vue')
     },
     {
-        path: '/upload',
+        path: '/upload/:seat_id',
         component: require('./views/sell/Upload.vue')
     },
     {

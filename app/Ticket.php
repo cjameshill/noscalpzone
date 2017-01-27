@@ -24,35 +24,35 @@ class Ticket extends Model
     ];
 
     public function seller() {
-        return $this->belongsTo('App\User', 'seller_id');
+        return $this->belongsTo(User::class, 'seller_id');
     }
 
     public function buyer() {
-        return $this->belongsTo('App\User', 'buyer_id');
+        return $this->belongsTo(User::class, 'buyer_id');
     }
 
     public function payment() {
-        return $this->belongsTo('App\Payment');
+        return $this->belongsTo(Payment::class);
     }
 
     public function download() {
-        return $this->hasOne('App\Download');
+        return $this->hasOne(Download::class);
     }
 
     public function events() {
-        return $this->belongsTo('App\Event');
+        return $this->belongsTo(Event::class);
     }
 
     public function tags() {
-        return $this->morphToMany('App\Tag', 'taggable');
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 
     public function type() {
-        return $this->morphToMany('App\Type', 'typeable');
+        return $this->morphToMany(Type::class, 'typeable');
     }
 
     public function set() {
-        return $this->belongsTo('App\Set');
+        return $this->belongsTo(Set::class);
     }
 
 

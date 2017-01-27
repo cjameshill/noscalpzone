@@ -18,15 +18,15 @@ class Payment extends Model
     protected $touches = 'tickets';
 
     public function buyer() {
-        return $this->belongsTo('App\Buyer');
+        return $this->belongsTo(User::class, 'buyer_id');
     }
 
     public function seller() {
-        return $this->belongsTo('App\Seller');
+        return $this->belongsTo(User::class, 'seller_id');
     }
 
     public function ticket() {
-        return $this->hasOne('App\Ticket');
+        return $this->hasOne(Ticket::class);
     }
 
 

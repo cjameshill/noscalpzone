@@ -11,23 +11,23 @@ class Tag extends Model
     ];
 
     public function users() {
-        return $this->morphedByMany('App\User', 'taggable');
+        return $this->morphedByMany(User::class, 'taggable');
     }
 
     public function venues() {
-        return $this->morphedByMany('App\Venue', 'taggable');
+        return $this->morphedByMany(Venue::class, 'taggable');
     }
 
     public function performers() {
-        return $this->morphedByMany('App\Performer', 'taggable');
+        return $this->morphedByMany(Performer::class, 'taggable');
     }
 
     public function events() {
-        return $this->morphedByMany('App\Event', 'taggable');
+        return $this->morphedByMany(Event::class, 'taggable');
     }
 
     public function tickets() {
-        return $this->morphedByMany('App\Ticket', 'taggable');
+        return $this->morphedByMany(Ticket::class, 'taggable');
     }
 
 }

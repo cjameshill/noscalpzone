@@ -31,8 +31,9 @@ Route::group(['prefix' => 'performers', 'name' => 'performers'], function (){
 
 Route::group(['prefix' => 'sell', 'name' => 'sell'], function (){
     Route::get('/{event}/resume', 'SellController@resume');
-    Route::post('/{event}/save', 'SellController@save');
-    Route::post('/{event}/upload', 'SellController@upload');
+    Route::post('/{event}/list', 'SellController@list');
+    Route::post('/{event}/save/{seat}', 'SellController@save');
+    Route::post('/{event}/upload/{seat}', 'SellController@upload');
     Route::get('/{event}', 'SellController@event');
     Route::get('/', 'SellController@index');
 });

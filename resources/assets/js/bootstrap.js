@@ -35,11 +35,6 @@ Vue.use(Validations);
 window.moment = require('moment');
 
 
-import Dropzone from 'dropzone';
-
-window.dropzone = Dropzone;
-
-
 /**
  * We'll register a HTTP interceptor to attach the "CSRF" header to each of
  * the outgoing requests issued by this application. The CSRF middleware
@@ -49,7 +44,6 @@ window.dropzone = Dropzone;
 window.axios.defaults.headers.common = {
     'X-Requested-With': 'XMLHttpRequest'
 };
-
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

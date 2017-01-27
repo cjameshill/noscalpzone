@@ -43,7 +43,7 @@
         methods: {
             list: function (){
                 this.processing = true;
-                this.$http.post('/sell/' + this.event.slug + '/save', this.form)
+                this.$http.post('/sell/' + this.event.slug + '/list')
                     .then((response) => {
                         this.success = true;
                         router.push('/success');

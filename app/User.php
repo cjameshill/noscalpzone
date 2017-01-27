@@ -39,31 +39,31 @@ class User extends Authenticatable
     ];
 
     public function customer(){
-        return $this->hasOne('App\Customer');
+        return $this->hasOne(Customer::class);
     }
 
     public function selling() {
-        return $this->hasMany('App\Ticket', 'seller_id');
+        return $this->hasMany(Ticket::class, 'seller_id');
     }
 
     public function buying() {
-        return $this->hasMany('App\Ticket', 'buyer_id');
+        return $this->hasMany(Ticket::class, 'buyer_id');
     }
 
     public function roles() {
-        return $this->belongsToMany('App\Role');
+        return $this->belongsToMany(Role::class);
     }
 
     public function location() {
-        return $this->morphMany('App\Location', 'locationable');
+        return $this->morphMany(Location::class, 'locationable');
     }
 
     public function social() {
-        return $this->morphMany('App\Social', 'sociable');
+        return $this->morphMany(Social::class, 'sociable');
     }
 
     public function tags() {
-        return $this->morphToMany('App\Tag', 'taggable');
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 
     public function profile() {
@@ -71,9 +71,8 @@ class User extends Authenticatable
     }
 
     public function phone() {
-        return $this->morphMany('App\Phone', 'phonable');
+        return $this->morphMany(Phone::class, 'phonable');
     }
-
 
     public function sell() {
         return new Sell($this);

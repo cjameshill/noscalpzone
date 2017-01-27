@@ -30,27 +30,27 @@ class Performer extends Model
     }
 
     public function events() {
-        return $this->belongsToMany('App\Event');
+        return $this->belongsToMany(Event::class);
     }
 
     public function venues() {
-        return $this->belongsToMany('App\Venue');
+        return $this->belongsToMany(Venue::class);
     }
 
     public function social() {
-        return $this->morphMany('App\Social', 'sociable');
+        return $this->morphMany(Social::class, 'sociable');
     }
 
     public function tags() {
-        return $this->morphToMany('App\Tag', 'taggable'); // Many to Many Polymorphic
+        return $this->morphToMany(Tag::class, 'taggable'); // Many to Many Polymorphic
     }
 
     public function type() {
-        return $this->morphToMany('App\Type', 'typeable'); // Many to Many Polymorphic
+        return $this->morphToMany(Type::class, 'typeable'); // Many to Many Polymorphic
     }
 
     public function profile() {
-        return $this->morphMany('App\Profile', 'profileable');
+        return $this->morphMany(Profile::class, 'profileable');
     }
 
 }

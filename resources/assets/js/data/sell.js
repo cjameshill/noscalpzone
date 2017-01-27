@@ -1,5 +1,6 @@
 export default {
     quantity: 1,
+    tickets: [],
     form: {
         is_ga: false,
         section: '',
@@ -8,8 +9,5 @@ export default {
         amount: 0,
         face_value: 0
     },
-    resume: {
-
-    },
-    success: false
+    success: false,
 }

@@ -11,10 +11,10 @@ class Map extends Model
     ];
 
     public function venues() {
-        return $this->morphedByMany('App\Venues', 'mappable');
+        return $this->morphedByMany(Venue::class, 'mappable');
     }
 
     public function events() {
-        return $this->morphedByMany('App\Events', 'mappable');
+        return $this->morphedByMany(Event::class, 'mappable');
     }
 }

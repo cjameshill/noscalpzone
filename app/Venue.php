@@ -28,38 +28,38 @@ class Venue extends Model
     }
 
     public function events() {
-        return $this->belongsToMany('App\Event');
+        return $this->belongsToMany(Event::class);
     }
 
     public function performers() {
-        return $this->belongsToMany('App\Performer');
+        return $this->belongsToMany(Performer::class);
     }
 
     public function location() {
-        return $this->morphMany('App\Location', 'locationable');
+        return $this->morphMany(Location::class, 'locationable');
     }
 
     public function social() {
-        return $this->morphMany('App\Social', 'sociable');
+        return $this->morphMany(Social::class, 'sociable');
     }
 
     public function maps() {
-        return $this->morphToMany('App\Map', 'mappable'); // Many to Many Polymorphic
+        return $this->morphToMany(Map::class, 'mappable'); // Many to Many Polymorphic
     }
 
     public function tags() {
-        return $this->morphToMany('App\Tag', 'taggable'); // Many to Many Polymorphic
+        return $this->morphToMany(Tag::class, 'taggable'); // Many to Many Polymorphic
     }
 
     public function profile() {
-        return $this->morphMany('App\Profile', 'profileable');
+        return $this->morphMany(Profile::class, 'profileable');
     }
 
     public function phone() {
-        return $this->morphMany('App\Phone', 'phonable');
+        return $this->morphMany(Phone::class, 'phonable');
     }
 
     public function type() {
-        return $this->morphToMany('App\Type', 'typeable'); // Many to Many Polymorphic
+        return $this->morphToMany(Type::class, 'typeable'); // Many to Many Polymorphic
     }
 }

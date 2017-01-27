@@ -10,14 +10,14 @@ class Type extends Model
     protected $guarded = 'name';
 
     public function events() {
-        return $this->morphedByMany('App\Event', 'typeable');
+        return $this->morphedByMany(Event::class, 'typeable');
     }
 
     public function performers() {
-        return $this->morphedByMany('App\Performer', 'typeable');
+        return $this->morphedByMany(Performer::class, 'typeable');
     }
 
     public function tickets() {
-        return $this->morphedByMany('App\Ticket', 'typeable');
+        return $this->morphedByMany(Ticket::class, 'typeable');
     }
 }

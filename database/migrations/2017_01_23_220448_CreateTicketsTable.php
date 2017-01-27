@@ -26,7 +26,7 @@ class CreateTicketsTable extends Migration
             $table->integer('amount')->default(0);
             $table->boolean('is_face_value')->default(false);
             $table->boolean('sold')->default(false);
-            $table->boolean('live')->default(true);
+            $table->boolean('live')->default(false);
             $table->boolean('in_cart')->default(false);
             $table->boolean('is_ga')->default(false);
             $table->string('section')->nullable();

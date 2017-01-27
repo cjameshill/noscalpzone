@@ -31,7 +31,7 @@ class Event extends Model
     }
 
     public function tickets() {
-        return $this->hasMany('App\Ticket');
+        return $this->hasMany(Ticket::class);
     }
 
     public function setsOfTickets() {
@@ -41,31 +41,31 @@ class Event extends Model
     }
 
     public function performers() {
-        return $this->belongsToMany('App\Performer');
+        return $this->belongsToMany(Performer::class);
     }
 
     public function venues() {
-        return $this->belongsToMany('App\Venue');
+        return $this->belongsToMany(Venue::class);
     }
 
     public function social() {
-        return $this->morphMany('App\Social', 'sociable');
+        return $this->morphMany(Social::class, 'sociable');
     }
 
     public function maps() {
-        return $this->morphToMany('App\Map', 'mappable');
+        return $this->morphToMany(Map::class, 'mappable');
     }
 
     public function tags() {
-        return $this->morphToMany('App\Tag', 'taggable');
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 
     public function type() {
-        return $this->morphToMany('App\Type', 'typeable');
+        return $this->morphToMany(Type::class, 'typeable');
     }
 
     public function profile() {
-        return $this->morphMany('App\Profile', 'profileable');
+        return $this->morphMany(Profile::class, 'profileable');
     }
 
 

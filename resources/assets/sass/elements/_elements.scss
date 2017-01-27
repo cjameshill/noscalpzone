@@ -202,7 +202,7 @@
 
 /// DROPZONE
 
-.dropzone.upload-ticket {
+.dropzone#upload-ticket {
   width: 100%;
   border-radius: $radius-large;
   border: 1px solid $grey-lighter;
@@ -212,3 +212,4 @@
   color: $grey-dark;
 
 }
+

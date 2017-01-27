@@ -164,6 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         GrahamCampbell\Flysystem\FlysystemServiceProvider::class,
         Aws\Laravel\AwsServiceProvider::class,
+        Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
          * Package Service Providers...

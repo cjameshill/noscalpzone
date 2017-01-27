@@ -9,7 +9,7 @@
                         <span class="is-1">/</span>
                         <router-link to="/steptwo" class="button is-medium is-secondary">Step Two</router-link>
                         <span class="is-1">/</span>
-                        <router-link to="/upload" class="button is-medium is-secondary">Upload</router-link>
+                        <router-link to="/upload/1" class="button is-medium is-secondary">Upload</router-link>
                         <span class="is-1">/</span>
                         <router-link to="/price" class="button is-medium is-secondary">Price</router-link>
                         <span class="is-1">/</span>
