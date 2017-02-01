@@ -2,18 +2,17 @@
 
 @section('content')
 
-    <section class="hero hero-primary is-small is-primary">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title is-1">
-                    List your ticket for free
-                </h1>
-                <h1 class="subtitle is-3 is-sans-serif">
-                    Oh yea, and we're only going to charge you a 6% fee, and we'll take care of the rest.
-                </h1>
-            </div>
-        </div>
-    </section>
+    @component('elements._hero-no-bg')
+
+        @slot('title')
+            List your ticket for free
+        @endslot
+
+        @slot('subtitle')
+             Oh yea, and we're only going to charge you a 6% fee, and we'll take care of the rest.
+        @endslot
+
+    @endcomponent
 
     <section class="section is-min-height">
         <div class="container">

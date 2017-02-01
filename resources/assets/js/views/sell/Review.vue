@@ -8,16 +8,20 @@
 
         <div class="column">
             <p class="is-4">Event: <strong>{{ event.title }}</strong></p>
-            <p class="is-4">Quantity: <strong>{{ form.quantity }}</strong></p>
-            <p class="is-4">Section: <strong>{{ form.section }}</strong></p>
-            <p class="is-4">Row: <strong>{{ form.row }}</strong></p>
-            <p class="is-4">Seat: <strong>{{ form.seat }}</strong></p>
-            <p class="is-4">Price: <strong>{{ form.amount }}</strong></p>
+            <p class="is-4">Quantity: <strong>{{ qty }}</strong></p>
+            <p class="is-4">Section: <strong>{{ sell.ticket.section }}</strong></p>
+            <p class="is-4">Row: <strong>{{ sell.ticket.row }}</strong></p>
+            <p class="is-4">Seat: <strong v-for="ticket in sell.tickets">{{ ticket.seat }} |</strong></p>
+            <p class="is-4">Price: <strong>{{ sell.ticket.amount }}</strong></p>
         </div>
 
         <div class="columns">
             <div class="column is-3 is-offset-9">
-                <button @click="list" class="button is-large is-primary" :class="{ 'is-loading' : processing }">List Now for ${{ form.amount }}</button>
+                <button @click.once="[sell.submit(event.slug), sell.next('/list/success')]"
+                        class="button is-large is-primary"
+                        :class="{ 'is-loading' : processing }">
+                    List Now for ${{ sell.ticket.amount }}
+                </button>
             </div>
         </div>
     </div>
@@ -34,21 +38,19 @@
 
         data() {
             return {
-                form: sell.default.form,
+                sell,
                 processing: false,
-                success: sell.default.success
             }
         },
 
-        methods: {
-            list: function (){
-                this.processing = true;
-                this.$http.post('/sell/' + this.event.slug + '/list')
-                    .then((response) => {
-                        this.success = true;
-                        router.push('/success');
-                    });
+        computed: {
+            qty: function () {
+                return _.size(sell.tickets);
             }
+        },
+
+        created() {
+            sell.resume(this.event.slug);
         }
     }
 </script>

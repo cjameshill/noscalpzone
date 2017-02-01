@@ -1,6 +1,6 @@
 <section class="header">
 
-    <nav class="nav is-background has-transition">
+    <nav class="nav {{ $color }}">
         <div class="nav-left">
             <div class="nav-item">
                 <a href="/" class="button is-secondary is-medium">#NoScalpZone</a>

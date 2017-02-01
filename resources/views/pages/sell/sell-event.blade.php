@@ -38,7 +38,7 @@
 
     </section>
 
-    <section class="section is-min-height">
+    <section id="sell-tickets" class="section is-min-height">
         <sell-tickets :event="{{ $e }}"></sell-tickets>
     </section>
 

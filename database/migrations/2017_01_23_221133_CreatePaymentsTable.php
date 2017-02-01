@@ -16,24 +16,23 @@ class CreatePaymentsTable extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->increments('id')->unsigned();
             $table->integer('amount');
+            $table->string('order_id');
             $table->string('charge_id');
             $table->integer('seller_id')->unsigned();
-            $table->integer('buyer_id')->unsigned();
-            $table->integer('ticket_id')->unsigned();
-            $table->boolean('payment_success')->default(true);
+            $table->integer('buyer_id')->nullable();
+            $table->integer('set_id')->unsigned();
+            $table->text('tickets');
+            $table->text('data');
             $table->timestamps();
 
             $table->foreign('seller_id')
                 ->references('id')
                 ->on('sellers');
 
-            $table->foreign('buyer_id')
+            $table->foreign('set_id')
                 ->references('id')
-                ->on('buyers');
+                ->on('sets');
 
-            $table->foreign('ticket_id')
-                ->references('id')
-                ->on('tickets');
 
         });
     }

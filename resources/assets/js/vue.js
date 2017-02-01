@@ -2,13 +2,14 @@ window.VueEvents = new Vue();
 
 Vue.component('CenterHeader', require('./components/CenterHeader.vue'));
 Vue.component('EventTickets', require('./components/EventTickets.vue'));
-Vue.component('TicketCheckout', require('./components/TicketCheckout.vue'));
 Vue.component('SellTickets', require('./components/SellTickets.vue'));
-Vue.component('TicketReview', require('./components/TicketReview.vue'));
+Vue.component('Dashboard', require('./components/Dashboard.vue'));
 
 import router from './routes';
 
 window.router = router;
+
+router.mode = 'html5';
 
 
 var vm = new Vue({
@@ -17,16 +18,18 @@ var vm = new Vue({
     components: [
         'CenterHeader',
         'EventTickets',
-        'TicketCheckout',
         'SellTickets',
-        'TicketReview'
+        'Dashboard'
     ],
 
     data: {
         checkout: false
     },
 
-    router: router
+    created() {
+        console.log('Loaded');
+    },
 
+    router: router
 
 });

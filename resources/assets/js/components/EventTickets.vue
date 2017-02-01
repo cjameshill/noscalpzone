@@ -54,7 +54,12 @@
                 <div class="tickets-list">
                     <transition-group name="flip-list" tag="div" class="columns is-multiline">
 
-                        <div v-for="set in filteredAndSortedSets" class="column is-12" :class="{ 'is-active' : this.selected }" @click="[select(set)]" :key="set.id">
+                        <div v-for="set in filteredAndSortedSets"
+                             class="column is-12"
+                             :class="{ 'is-active' : this.selected }"
+                             @click="[select(set)]"
+                             :key="set.id"
+                        >
 
                             <ticket-set-list-item :type="'is-music'"
                                               :event="event"
@@ -77,21 +82,36 @@
             </div>
 
         </div>
+
+
+        <transition name="bounce-up" mode="out-in">
+            <router-view></router-view>
+        </transition>
+
+        <transition name="bounce-up">
+            <selected-ticket v-show="Object.keys(Checkout.selected).length !== 0"></selected-ticket>
+        </transition>
+
     </div>
 </template>
 
 <script>
 
     Vue.component('TicketSetListItem', require('./TicketSetListItem.vue'));
+    Vue.component('SelectedTicket', require('./SelectedTicket.vue'));
+
+    import Checkout from "../data/Checkout";
 
     export default {
 
         components: [
-            'TicketSetListItem'
+            'TicketSetListItem',
+            'SelectedTicket'
         ],
 
         data() {
             return {
+                Checkout,
                 sortKey: '',
                 asc: true,
                 filter: {
@@ -143,7 +163,7 @@
 
         methods: {
             select: function (set) {
-                VueEvents.$emit('select-ticket', set);
+                Checkout.select(set);
             }
         }
 

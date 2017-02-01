@@ -2,20 +2,52 @@
     <div class="container has-text-centered">
 
         <header>
-            <nav class="nav dashboard-nav">
-                <div v-show="! success" class="nav-center">
-                    <span class="nav-item">
-                        <router-link to="/" class="button is-medium is-secondary">Step One</router-link>
-                        <span class="is-1">/</span>
-                        <router-link to="/steptwo" class="button is-medium is-secondary">Step Two</router-link>
-                        <span class="is-1">/</span>
-                        <router-link to="/upload/1" class="button is-medium is-secondary">Upload</router-link>
-                        <span class="is-1">/</span>
-                        <router-link to="/price" class="button is-medium is-secondary">Price</router-link>
-                        <span class="is-1">/</span>
-                        <router-link to="/review" class="button is-medium is-secondary">Review and List</router-link>
-                    </span>
+            <nav class="level dashboard-nav">
+                <!--<div class="level-center">-->
+                    <!--<div v-for="r in routes.options.routes" class="level-item has-text-centered">-->
+                        <!--<div>-->
+                            <!--<router-link to="/" class="button is-medium is-secondary" :class="{ 'is-disabled' : sell.success }">{{ r.name }}</router-link>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <div class="level-center">
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <router-link to="/list/" class="button is-medium is-secondary" :class="{ 'is-disabled' : sell.success }">Seated and Section</router-link>
+                            <p v-show="sell.ticket.is_ga" class="is-5 is-sans-serif is-primary">Is General Admission</p>
+                            <p v-show="! sell.ticket.is_ga && sell.ticket.section != ''" class="is-5 is-sans-serif is-primary">Section: <strong>{{ sell.ticket.section }}</strong></p>
+                            <p v-show="! sell.ticket.is_ga && sell.ticket.row != ''" class="is-5 is-sans-serif is-primary">Row: <strong>{{ sell.ticket.row }}</strong></p>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <router-link to="/list/ticket" class="button is-medium is-secondary" :class="{ 'is-disabled' : sell.success }">Tickets and Seats
+                            </router-link>
+                            <p v-show="sell.tickets[0].seat != ''" class="is-5 is-sans-serif is-primary">Seats</p>
+                            <span v-show="sell.tickets[0].seat != ''" v-for="t in sell.tickets" class="is-5 is-sans-serif is-primary"> | <strong>{{ t.seat }}</strong> | </span>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <router-link to="/list/price" class="button is-medium is-secondary" :class="{ 'is-disabled' : sell.success }">Price</router-link>
+                            <p v-show="sell.ticket.amount != ''" class="is-5 is-sans-serif is-primary">$<strong>{{ sell.ticket.amount }}</strong></p>
+
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <router-link to="/list/payment" class="button is-medium is-secondary" :class="{ 'is-disabled' : sell.success }">Payment</router-link>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <router-link to="/list/review" class="button is-medium is-secondary" :class="{ 'is-disabled' : sell.success }">Review and List
+                            </router-link>
+                        </div>
+                    </div>
                 </div>
+
             </nav>
         </header>
 
@@ -41,26 +73,14 @@
 
         data() {
             return {
-                form: sell.default.form,
-                resume: sell.default.resume,
-                success: sell.default.success
-            }
-        },
-
-        methods: {
-            getCurrentTicket: function (){
-                this.$http.get('/sell/' + this.event.slug + '/resume')
-                    .then((response) => {
-                        this.resume = response.data;
-                    });
-
+                sell
             }
         },
 
         created() {
-            this.getCurrentTicket();
-        }
+            console.log('Vue Loaded');
+        },
+
 
     }
-
 </script>

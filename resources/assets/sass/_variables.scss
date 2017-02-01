@@ -105,7 +105,7 @@ $background: $white-ter !default
 $border: $grey-lighter !default
 $border-hover: $grey-light !default
 
-$footer-background: $black-bis;
+$footer-background: $white-grey-gradient;
 
 $box-shadow: 1px 1px 30px 0px $black-bis;
 $box-shadow-light: 0 0 8px 0px $grey-lighter;
@@ -159,7 +159,7 @@ $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 !default
 
 // Z-Index
 
-$elements: wrapper, header, cover;
+$elements: wrapper, body, header, cover;
 
 // Breakpoints
 

@@ -1,41 +1,39 @@
 <template>
-    <div class="columns is-multiline center-row">
-        <div class="column is-12">
-            <h1 class="subtitle is-3 is-sans-serif is-underlined" :class="'is-music'">
-               Upload your ticket
-            </h1>
+    <div class="columns center-column">
+        <div class="columns center-column">
+            <div class="column">
+                <h1 class="subtitle is-3 is-sans-serif is-underlined" :class="'is-music'">
+                   Upload your ticket: {{ $route.params.list }}
+                </h1>
+            </div>
         </div>
 
-        <div class="column is-6">
+        <div class="columns center-row">
+            <div class="column">
 
-            <dropzone id="upload-ticket" v-bind:use-custom-dropzone-options="true" v-bind:dropzone-options="options" :url="uploadURI" v-on:vdropzone-success="showSuccess"></dropzone>
+                <dropzone id="upload-ticket" :key="$route.params.list" v-bind:use-custom-dropzone-options="true" v-bind:dropzone-options="options" :url="uploadURI" v-on:vdropzone-success="showSuccess"></dropzone>
 
+            </div>
+
+            <div v-show="! sell.default.ticket.is_ga" class="column">
+                <h1 class="subtitle is-3 is-sans-serif is-underlined" :class="'is-music'">
+                    Seat {{ this.$route.params.list }}
+                </h1>
+
+                <p class="control">
+                    <input v-model="sell.default.ticket.seat" type="text" class="input is-large" placeholder="Seat">
+                </p>
+            </div>
         </div>
 
-        <div v-show="! tickets[0].is_ga" class="column is-6">
-            <p class="control">
-                <input v-model="tickets[0].section" type="text" name="section" class="input is-large" placeholder="Section" autofocus>
-            </p>
-            <p class="control">
-                <input v-model="tickets[0].row" type="text" name="row" class="input is-large" placeholder="Row">
-            </p>
+        <div class="column">
+            <button @click="[save()]" class="button is-large">Save</button>
         </div>
-        <div class="column is-3">
-            <h1 class="subtitle is-3 is-sans-serif is-underlined" :class="'is-music'">
-                Seat {{ this.$route.params.seat_id }}
-            </h1>
-
-            <p class="control">
-                <input v-model="tickets[0].seat" type="text" name="seat" class="input is-large" placeholder="Seat">
-            </p>
-
+        <div class="column">
+            <button @click="[next('/list/price')]" class="button is-large">Next: Price</button>
         </div>
-
-        <div class="column is-3 is-offset-9">
-            <button @click="[save(), next('/price')]" class="button is-large is-primary">Next: Price</button>
-        </div>
-        <div class="column is-3 is-offset-9">
-            <button @click="[save(), next('/upload/2')]" class="button is-large is-primary">Next Ticket</button>
+        <div class="column">
+            <button @click="[next('upload', nextList)]" class="button is-large is-primary">Add another Ticket</button>
         </div>
 
     </div>
@@ -56,18 +54,19 @@
             Dropzone
         },
 
+        computed: {
+            listID: function () {
+                return this.$route.params.list;
+            },
+            nextList: function () {
+                return this.listID + 1;
+            }
+        },
+
         data() {
             return {
                 sell,
-                tickets: [
-                    {
-                        is_ga: false,
-                        section: '',
-                        row: '',
-                        seat: ''
-                    }
-                ],
-                uploadURI: '/sell/' + this.event.slug + '/upload/' + this.currentSeat,
+                uploadURI: '/api/' + this.event.slug + '/list/' + this.$route.params.list,
                 options: {
                     headers: {
                         "X-CSRF-TOKEN": data.default.csrfToken
@@ -76,25 +75,14 @@
             }
         },
 
-        created: function () {
-            console.log('loaded component');
-        },
-
-        computed: {
-            nextSeat: function () {
-                if(this.$route.params.seat_id == '1'){ return 2 }
-                if(this.$route.params.seat_id == '2'){ return 3 }
-                if(this.$route.params.seat_id == '3'){ return 4 }
-            },
-            currentSeat: function () {
-                return this.$route.params.seat_id;
-            }
-        },
-
         watch: {
             '$route' (to, from){
-                console.log('watch component');
+                this.uploadURI = '/api/' + this.event.slug + '/list/' + this.listID;
             }
+        },
+
+        created: function () {
+            console.log('loaded component');
         },
 
         methods: {
@@ -103,14 +91,15 @@
             },
 
             save: function () {
-                this.$http.post('/sell/' + this.event.slug + '/save/' + this.currentSeat, this.tickets)
-                    .then((response) => {
-                        console.log(response);
-                    });
+                sell.default.add(this.event.slug, this.listID);
             },
 
-            next: function (page) {
-                router.push(page);
+            next: function (page, list = null) {
+                if(list == null){
+                    router.push(page);
+                } else {
+                    router.push({ name: page, params: { list: list }});
+                }
             }
         }
     }

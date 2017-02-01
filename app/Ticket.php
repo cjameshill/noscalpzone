@@ -2,12 +2,13 @@
 
 namespace App;
 
+use App\Traits\ModelScopes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Ticket extends Model
 {
-    use SoftDeletes;
+    use SoftDeletes, ModelScopes;
 
     protected $table = 'tickets';
 
@@ -22,6 +23,10 @@ class Ticket extends Model
         'created_at',
         'updated_at'
     ];
+
+    public function getRouteKeyName() {
+        return 'key';
+    }
 
     public function seller() {
         return $this->belongsTo(User::class, 'seller_id');
@@ -55,6 +60,17 @@ class Ticket extends Model
         return $this->belongsTo(Set::class);
     }
 
+    public function withSetsOfTickets() {
+        return Set::whereHas('tickets', function ($q){
+            return $q->where('id', $this->id);
+        })->with('tickets', 'tickets.type')->get();
+    }
+
+    public function withSetsOfTicketsWithDownloads() {
+        return Set::whereHas('tickets', function ($q){
+            return $q->where('id', $this->id);
+        })->with('tickets', 'tickets.download');
+    }
 
 
 }

@@ -16,4 +16,8 @@ class Customer extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function source() {
+        return $this->hasOne(Source::class);
+    }
+
 }

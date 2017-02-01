@@ -18,6 +18,26 @@ span, p {
       font-size: $size;
     }
   }
+
+  @each $name, $item in $colors {
+    $color: nth($item, 1);
+    &.is-#{$name} {
+      color: $color;
+      strong {
+        color: $color;
+      }
+    }
+  }
+
+  @each $name, $item in $theme-colors {
+    $color: nth($item, 1);
+    &.is-#{$name} {
+      color: $color;
+      strong {
+        color: $color;
+      }
+    }
+  }
 }
 
 .is-sans-serif {
@@ -287,10 +307,28 @@ header, footer {
   }
 }
 
+.level.dashboard-nav {
+  .level-center {
+    .level-item {
+      border-right: 1px solid $grey-light;
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }
+}
+
 //// IMAGES
 
 img {
   width: 90%;
   height: auto;
   margin: 0 auto;
+}
+
+
+span.control {
+  .button {
+    margin: 0 0.5em;
+  }
 }

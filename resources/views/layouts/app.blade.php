@@ -6,11 +6,11 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}" id="csrf-token">
 
     <title>{{ config('app.name') }}</title>
 
-    <link href="/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
@@ -33,9 +33,13 @@
 <script type="text/javascript">
     Stripe.setPublishableKey(NoScalpZone.stripeKey);
 </script>
-<script src="/js/app.js"></script>
+{{--<script src="{{ mix('js/manifest.js') }}"></script>--}}
+{{--<script src="{{ mix('js/vendor.js') }}"></script>--}}
+<script src="{{ mix('js/app.js') }}"></script>
 
-@include('partials._js-notifications-fade-out')
+    @yield('page-specific-js')
+
+    @include('partials._js-notifications-fade-out')
 
 </body>
 </html>

@@ -18,7 +18,6 @@ class CreateCustomersTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->string('stripe_email');
             $table->string('stripe_cust_id');
-            $table->string('stripe_token');
             $table->timestamps();
 
             $table->foreign('user_id')

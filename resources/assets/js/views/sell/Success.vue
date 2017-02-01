@@ -12,13 +12,18 @@
 
         <div class="columns">
             <div class="column center">
-                <a :href="eventURI" class="button is-large is-primary">View your ticket listing</a>
+                <span class="control">
+                    <button @click="reset" class="button is-large">List Another for this Event</button>
+                    <a :href="eventURI" class="button is-large is-primary">View your ticket listing</a>
+                </span>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
+    import sell from '../../data/sell';
 
     export default {
         props: [
@@ -27,8 +32,20 @@
 
         data() {
             return {
+                sell,
                 eventURI: '/events/' + this.event.slug
             }
-        }
+        },
+
+        methods: {
+            reset: function () {
+                this.$http.post('/api/event/' + this.event.slug + '/list/reset')
+                    .then((response) => {
+                        sell.success = false;
+                        window.location = '/sell/' + this.event.slug + '/list';
+                    });
+
+            }
+        },
     }
 </script>

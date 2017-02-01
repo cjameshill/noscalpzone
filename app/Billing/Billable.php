@@ -4,9 +4,18 @@ namespace App\Billing;
 
 
 use App\Tickets\Sell;
+use App\User;
 
 trait Billable
 {
 
-    // Billing Methods
+
+    public static function getUserByStripeId($stripe) {
+
+        return static::whereHas('customer', function ($q) use($stripe) {
+            $q->where('stripe_cust_id', $stripe);
+        })->firstOrFail();
+
+    }
+
 }

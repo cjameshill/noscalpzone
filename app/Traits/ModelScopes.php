@@ -3,6 +3,8 @@
 namespace App\Traits;
 
 
+use App\Type;
+
 trait ModelScopes
 {
 
@@ -12,5 +14,20 @@ trait ModelScopes
         });
     }
 
+    public function getTypeName() {
+        return $this->type()->first()->name;
+    }
+
+    public function addType($type) {
+
+        if(is_string($type)){
+            $t = Type::where('name', $type)->first();
+            return $this->type()->attach($t);
+        } else {
+            return $this->type()->attach($type);
+        }
+
+
+    }
 
 }

@@ -5,6 +5,8 @@ body {
   min-height: 100vh;
   font-family: $family-serif;
   letter-spacing: -0.08em;
+  z-index: index($elements, body);
+
 
 }
 
@@ -12,4 +14,8 @@ body {
   display: block;
   position: relative;
   z-index: index($elements, wrapper);
+}
+
+.wrapper.dashboard {
+  height: 100vh;
 }

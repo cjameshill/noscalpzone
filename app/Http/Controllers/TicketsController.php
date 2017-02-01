@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Ticket;
 
@@ -9,7 +10,7 @@ class TicketsController extends Controller
 {
     public function __construct() {
 
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
     /**
@@ -46,8 +47,13 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(){
+    public function show(Ticket $ticket){
 
+        if(auth()->user()->isSelling($ticket)){
+            return $ticket;
+        }
+
+        return response()->json(['message' => 'You can not see other tickets which you are not selling'], 404);
 
     }
 
@@ -80,6 +86,15 @@ class TicketsController extends Controller
      */
     public function destroy($id) {
         //
+    }
+
+    public function set(Ticket $ticket) {
+        if(auth()->user()->isSelling($ticket)){
+            return $ticket->withSetsOfTickets();
+        }
+
+        return response()->json(['message' => 'You can not see other tickets which you are not selling'], 404);
+
     }
 
 }

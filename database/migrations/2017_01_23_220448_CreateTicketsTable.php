@@ -19,7 +19,6 @@ class CreateTicketsTable extends Migration
             $table->integer('set_id')->unsigned();
             $table->integer('event_id')->unsigned();
             $table->integer('buyer_id')->nullable();
-            $table->integer('download_id')->nullable();
             $table->uuid('key')->unique();
             $table->string('title');
             $table->integer('face_value')->default(0);
@@ -52,7 +51,7 @@ class CreateTicketsTable extends Migration
             $table->increments('id');
             $table->integer('ticket_id')->unsigned();
             $table->uuid('ticket_key');
-            $table->string('ticket_uri')->unique();
+            $table->string('ticket_uri');
             $table->timestamps();
 
             $table->foreign('ticket_id')

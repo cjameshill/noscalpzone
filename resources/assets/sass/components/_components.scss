@@ -87,6 +87,15 @@ nav.nav {
 }
 
 
+//// NAV DASHBOARD
+
+nav.nav.nav-dashboard {
+  width: 100%;
+  background: $white;
+  border-bottom: 1px solid $white-bis;
+}
+
+
 //// NOTIFICATIONS
 
 .notifications-hold {
@@ -130,20 +139,21 @@ section.footer {
   bottom: 2vh;
   left: 2vw;
   z-index: 100;
-  cursor: pointer;
   transition: all 0.2s $ease-cubic;
-  overflow-y: scroll;
+  overflow-y: hidden;
 
   &:hover {
     height: 18vh;
   }
 
   &.is-open {
+    display: block;
     height: 100vh;
     width: 100vw;
     border-radius: 0px;
     left: 0;
     bottom: 0;
+    z-index: 101;
   }
 }
 

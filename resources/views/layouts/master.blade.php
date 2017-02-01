@@ -2,7 +2,7 @@
 
 @section('container')
 
-    @include('components._primary-header')
+    @include('components._primary-header', ['color' => 'is-background'])
 
     <div class="wrapper">
         @yield('content')
@@ -11,6 +11,9 @@
 
     </div>
 
-    <ticket-checkout></ticket-checkout>
+
+@endsection
+
+@section('page-specific-js')
 
 @endsection
