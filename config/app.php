@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://noscalpzone-beta.us-east-1.elasticbeanstalk.com'),
+    'url' => env('APP_URL', 'https://noscalpzone.com'),
 
     /*
     |--------------------------------------------------------------------------
