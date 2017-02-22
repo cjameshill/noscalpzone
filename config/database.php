@@ -1,5 +1,12 @@
 <?php
 
+if (!defined('RDS_HOSTNAME')) {
+    define('RDS_HOSTNAME', $_SERVER['RDS_HOSTNAME']);
+    define('RDS_USERNAME', $_SERVER['RDS_USERNAME']);
+    define('RDS_PASSWORD', $_SERVER['RDS_PASSWORD']);
+    define('RDS_DB_NAME', $_SERVER['RDS_DB_NAME']);
+}
+
 return [
 
     /*
@@ -54,11 +61,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', 'aa1rvdevoq1m3vx.cru4vgb0p3vb.us-east-1.rds.amazonaws.com'),
+            'host' => 'RDS_HOSTNAME',
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'noscalpzone-beta'),
-            'username' => env('DB_USERNAME', 'swanky'),
-            'password' => env('DB_PASSWORD', '@LiveSwanky123'),
+            'database' => 'RDS_DB_NAME',
+            'username' => 'RDS_USERNAME',
+            'password' => 'RDS_PASSWORD',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
