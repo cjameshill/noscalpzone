@@ -1,5 +1,11 @@
 <?php
 
+if (!defined('APP_ENV')) {
+    define('APP_ENV', $_SERVER['APP_ENV']);
+    define('APP_URL', $_SERVER['APP_URL']);
+    define('APP_DEBUG', $_SERVER['APP_DEBUG']);
+}
+
 return [
 
     /*
@@ -25,7 +31,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => APP_ENV,
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +44,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => APP_DEBUG,
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +57,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://noscalpzone.com'),
+    'url' => APP_URL,
 
     /*
     |--------------------------------------------------------------------------
