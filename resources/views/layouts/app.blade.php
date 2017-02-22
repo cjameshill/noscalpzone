@@ -10,7 +10,7 @@
 
     <title>{{ config('app.name') }}</title>
 
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+    <link rel="stylesheet" href="/css/app.css">
 
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
@@ -35,7 +35,7 @@
 </script>
 {{--<script src="{{ mix('js/manifest.js') }}"></script>--}}
 {{--<script src="{{ mix('js/vendor.js') }}"></script>--}}
-<script src="{{ mix('/js/app.js') }}"></script>
+<script src="/js/app.js"></script>
 
     @yield('page-specific-js')
 
