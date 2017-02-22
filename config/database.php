@@ -61,11 +61,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => 'RDS_HOSTNAME',
+            'host' => RDS_HOSTNAME,
             'port' => env('DB_PORT', '3306'),
-            'database' => 'RDS_DB_NAME',
-            'username' => 'RDS_USERNAME',
-            'password' => 'RDS_PASSWORD',
+            'database' => RDS_DB_NAME,
+            'username' => RDS_USERNAME,
+            'password' => RDS_PASSWORD,
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
