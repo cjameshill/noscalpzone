@@ -56,17 +56,6 @@ $response = $kernel->handle(
 );
 
 
-if(DB::connection()->getDatabaseName())
-{
-    echo "Connected to database ".DB::connection()->getDatabaseName();
-    echo $_SERVER['RDS_HOSTNAME'];
-    echo $_SERVER['RDS_USERNAME'];
-    echo $_SERVER['RDS_PASSWORD'];
-    echo $_SERVER['RDS_DB_NAME'];
-    echo $_SERVER['APP_URL'];
-}
-
-
 $response->send();
 
 $kernel->terminate($request, $response);
